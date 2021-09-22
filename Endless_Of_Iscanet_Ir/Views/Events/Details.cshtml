@@ -1,0 +1,221 @@
+﻿@model Models.Event
+@using Models.ViewModels
+@{
+    Layout = "~/Views/Shared/_SiteDetailsLayout.cshtml";
+}
+
+
+@section Metas{
+    <meta name="keywords" content="@Model.Event_Title,@Resources.LabelResources.Events @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology,@Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology,انجمن بیهوشی" />
+    <meta name="description" content="@Model.Abstract_Description" />
+}
+@section Title{
+
+
+    <title>@Model.Event_Title</title>
+}
+
+
+    <header>
+@section Header{
+
+}
+     
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="~/Content/Files/EventFiles/@Model.FileName" class="d-block h-25 w-100" alt="@Model.Event_Title">
+        </div>
+    </div>
+</div>
+</header>
+
+<main>
+
+
+
+
+
+    <div class="row">
+        <article class="col-12 container text-justify" itemscope itemtype="http://schema.org/Event">
+            <header class="mb-5 pb-2 mt-4" itemscope itemtype="http://schema.org/BlogPosting">
+                <h1 class="text-center col-12 headline-font" itemprop="headline">
+                    @Html.DisplayFor(model => model.Event_Title)
+                </h1>
+            </header>
+            <hr class="col-6 text-center" />
+            <section class="pb-3 px-2">
+                <p class="col-12 container text-justify line_het" itemprop="event">
+                    @Html.DisplayFor(model => model.Event_Des)
+                </p>
+            </section>
+          
+            <hr class="text-center col-6" />
+            <section class="col-12 row">
+                <section class="col-6">
+                    <em itemprop="author" class="text-right">
+                        @Html.DisplayFor(model => model.Event_Writer)
+                    </em>
+                </section>
+                <section class="col-6 " itemscope itemtype="http://schema.org/BlogPosting">
+                    <time class="text-muted text-left" itemprop="datePublished">
+                  
+                    </time>
+                </section>
+            </section>
+        </article>
+
+    </div>
+</main>
+
+
+@foreach(CommentsVM comment in Model.CommentViewModels)
+
+
+
+{
+
+        <div class="row" style="width: 100.3%; border-bottom: 1px solid #d2cece; margin-right: -14px; margin-left: -1px;">
+
+            <div class="col-md-4" style="width: 21%;">
+                <div class="userProfil" style="margin-left: 9px; margin-top: 12px;">
+                    @*<img src="~/Images/@comment.Users.imageProfile" class="img-circle" style="width: 46px; height: 53px; border: 1px solid #bcb8b8;" />*@
+                    @*<a href="#" style="margin-left: 5px; font-weight: bold; font-size: 13px;"> @comment.Users.Username </a>*@
+                </div>
+            </div>
+
+            <div class="col-md-7" style="width: 60%;">
+                <div class="commentDetails">
+                    <p style="margin-top: 27px; font-size: 13px; color: #9c9898;"> @comment.CommentMsg </p>
+                    <a href="#" class="Reply" data-id="@comment.ComID">Reply</a>
+                    <div class="@string.Format("{0}_{1}", "ReplayComments", comment.ComID)" style="display:none;">
+
+
+                        <div class="ReplayCommentInput" style="margin-left: 3%;  margin-bottom: 5px; margin-top: 8px;">
+                            <input type="text" id="@string.Format("{0}_{1}", "inputReplay", comment.ComID)" class="form-control" placeholder="Add a Comment ..." style="display: inline;" />
+                            @*<button type="button" class="btn btn-p ReplyAddComment" data-id="@comment.ComID"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></button>*@
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-1" style="width: 19%;">
+                <div class="commentDate">
+                    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                    <time class="timeago" style="margin-top: 27px; font-size: 13px; color: #9c9898;  margin-left: 4px;" datetime="@comment.CommentDate">@comment.CommentDate</time>
+
+                </div>
+            </div>
+        </div>
+
+    
+
+        
+
+    }
+
+<div class="panel-footer">
+    <button type="button" class="btn btn-primary Comment" data-id="@Model.EventId" value="Comment">
+        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Comment
+    </button>
+
+</div>
+<div id="@string.Format("{0}_{1}","commentsBlock", Model.EventId)">
+
+    <div class="AddComment col-12 ">
+        <textarea type="text" id="@string.Format("{0}_{1}", "comment", Model.EventId)" class="col-12 d-block form-control" placeholder="Add a Comment ..." ></textarea>
+        <button type="button" class="btn btn-default addComment" data-id="@Model.EventId"><i class="fas fa-comments"></i>&nbsp;</button>
+    </div>
+
+</div>
+
+
+
+
+
+<script src="~/Scripts/jquery-3.0.0.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script type="text/javascript">
+ $(document).ready(function () {
+
+
+            //Click Comment
+            $('.Comment').on('click', function () {
+
+                var id = $(this).attr("data-id");
+                var allCommentsArea = $('<div>').addClass('allComments_' + id);
+
+                //function that allow us to get all comments related to post id
+                $.ajax({
+
+                    type: 'GET',
+                    url: '@Url.Action("GetComments", "Events")',
+                    data: { PostId: id },
+                    success: function (response) {
+
+                        if ($('div').hasClass('allComments_' + id + ''))
+                        {
+                            $('div[class=allComments_' + id + ']').remove();
+                        }
+                        //console.log(response);
+
+
+                        allCommentsArea.html(response);
+                        allCommentsArea.prependTo('#commentsBlock_' + id);
+
+
+                    },
+                    error: function (response) {
+                        alert('Sorry: Comments cannot be loaded !');
+                    }
+
+
+                })
+
+            });
+
+            //Add New Comment
+            $('.addComment').on('click', function () {
+
+                var postId = $(this).attr('data-id');
+                var commentMsg = $('#comment_' + PostId).val();
+                var dateTimeNow = new Date();
+
+                //alert('Hello');
+                var comment = {
+                    CommentMsg: Text,
+                    CommentedDate: dateTimeNow.toLocaleString()
+                };
+
+                $.ajax({
+
+                    type: 'POST',
+                    url: '@Url.Action("AddComment", "Events")',
+                    data: { comment, PostId },
+                    success: function (response) {
+
+                        $('div[class=allComments_' + PostId + ']').remove();
+
+                        var allCommentsArea = $('<div>').addClass('allComments_' + PostId);
+                        allCommentsArea.html(response);
+
+                        allCommentsArea.prependTo('#commentsBlock_' + PostId);
+
+                    },
+                    error: function (response) {
+                        alert('Sorry: Something Wrong');
+                    }
+
+                });
+
+            });
+
+            jQuery("time.timeago").timeago();
+
+        });
+
+</script>

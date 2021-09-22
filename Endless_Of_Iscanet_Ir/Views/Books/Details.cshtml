@@ -1,0 +1,49 @@
+﻿@model Models.Book
+
+@{
+    Layout = "~/Views/Shared/_SiteDetailsLayout.cshtml";
+}
+
+
+<title>@Model.Book_Title | @Model.Book_writer</title>
+
+<article itemscope itemtype="http://schema.org/Article" class="container">
+    <h1 itemprop="name">
+        @Html.DisplayFor(model => model.Book_Title)
+    </h1>
+    <section>
+        <h2 itemprop="headline">@Resources.LabelResources.Abstract_Description :</h2>
+        <p class="text-justify" itemprop="about">
+            @Html.DisplayFor(Model => Model.Abstract_Description)
+        </p>
+    </section>
+    <section>
+
+        <h2 itemprop="alternativeHeadline">
+            @Resources.LabelResources.Description
+        </h2>
+<p class="text-justify text-black-50 line_het" itemprop="description">
+    @Html.DisplayFor(modelItem=>modelItem.Book_Des)
+</p>
+    </section>
+    <section class="text-justify" itemscope itemtype="http://schema.org/Person">
+        <h3 itemprop="name">
+            @Html.DisplayFor(model => model.Book_writer)
+        </h3>
+    </section>
+    <br />
+    <hr class="col-6 text-center" />
+    <a href="~/Content/Files/BookFiles/@Model.Book_file_Name"  class="col-4 text-center btn btn-outline-primary" download>@Resources.LabelResources.Download @Model.Book_Title</a>
+    
+    @if (User.IsInRole("Admin")==true)
+    {
+       @Html.ActionLink("Delete", "Books", new { id = Model.BookId }, new { @class="col-4 btn btn-outline-danger"})
+
+    }
+
+</article>
+
+
+
+
+

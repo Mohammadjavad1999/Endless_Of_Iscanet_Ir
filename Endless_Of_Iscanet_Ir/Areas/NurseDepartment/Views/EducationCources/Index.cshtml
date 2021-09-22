@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Models.EducationCource>
+
+@{
+    Layout = "~";
+}
+
+
+    <title>@Resources.LabelResources.EductionCourse @Resources.LabelResources.Of @Resources.LabelResources.NurseDepartment @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</title>
+
+
+
+
+    @foreach (var item in Model)
+    {
+        <div class="card col-md-12 col-4">
+            <figure>
+                <img src="~/Areas/NurseDepartment/Content/Files/Education_Course/"
+                <figcaption>text</figcaption>
+            </figure>
+
+            @Html.DisplayFor(modelItem => item.Title)
+
+
+            @Html.DisplayFor(modelItem => item.Abstract)
+
+
+            @Html.ActionLink("Details", "Details", new { id = item.EductionCourcesId })
+
+        </div>
+
+
+    }
+
+    
+

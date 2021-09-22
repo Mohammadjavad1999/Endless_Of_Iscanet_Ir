@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @RenderSection("Metas", false)
+    @*<link rel="stylesheet" href="" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="" media="all">*@
+    @*<link href="~/Content/Custom.css" rel="stylesheet" />*@
+    @Styles.Render("https://kit-free.fontawesome.com/releases/latest/css/free.min.css")
+    @Styles.Render("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+    @Styles.Render("~/Content/Custom.css")
+    @*@Styles.Render("~/Content/fontiran.css")*@
+    @RenderSection("Title", false)
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @RenderSection("Header", false)
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white col-12">
+        <a class="navbar-brand" href="/Home/Index"><img src="~/Content/Images/HeartAnstiasiology.png" style="width:45px;height:45px;" alt="Alternate Text" /></a>
+        <button class="navbar-toggler" id="nvb-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div id="my-nav" class="collapse navbar-collapse ">
+            <ul class="navbar-nav mr-auto justify-content-center ">
+                @*<li class="nav-item active  justify-content-center">
+                        <a class="nav-link d-flex  justify-content-center" href="#"> <span class="sr-only">(current)</span></a>
+                    </li>*@
+                <li class="nav-item justify-content-center active text-white">
+                    <a class="nav-link d-flex justify-content-center" href="/NuresDepartment/NurseDepartment_Articles/Index" tabindex="-1" aria-disabled="true"><strong> @Resources.ButtonResources.Articles</strong></a>
+                </li>
+                <li class="nav-item justify-content-center">
+                    <a class="nav-link d-flex justify-content-center" href="/NurseDepartment/NurseDepartment_Books/Index" tabindex="-1" aria-disabled="true"> <strong> @Resources.ButtonResources.Books</strong></a>
+                </li>
+
+
+                <li class="nav-item justify-content-center">
+                    <a class="nav-link d-flex justify-content-center" href="~/Home/Cash_Payment" tabindex="-1" aria-disabled="true"><strong>@Resources.ButtonResources.Sign_up</strong></a>
+                </li>
+                <li class="d-flex nav-item dropdown justify-content-center">
+                    <a class="nav-link dropdown-toggle justify-content-center" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>@Resources.ButtonResources.Contact_us</strong></a>
+                    <div class="dropdown-menu justify-content-center bg-light" aria-labelledby="dropdownId">
+
+                        <a class="dropdown-item" href="/Home/Contact_Secratariant"><i class="fas fa-mail-bulk"></i>&nbsp;<strong>@Resources.ButtonResources.Contact_with_Secretariat</strong></a>
+                        <a class="dropdown-item" href="#" download><i class="fas fa-gavel"></i>&nbsp;<strong>@Resources.ButtonResources.Statute</strong></a>
+                        <a class="dropdown-item" href="/Home/DirectorBoard"><i class="fas fa-users"></i>&nbsp;<strong>@Resources.ButtonResources.Organization_Chart_and_Board</strong></a>
+                        <a class="dropdown-item" href="/Home/Members"><i class="fas fa-user-md"></i>&nbsp;<strong>@Resources.LabelResources.Members_of_the_Anesthesiology_Society_of_Iran</strong></a>
+                        <a class="dropdown-item" href="/Home/Adminstrative_documentiation"><i class="far fa-envelope"></i>&nbsp;<strong>@Resources.ButtonResources.Administrative_documentation</strong></a>
+                        <a class="dropdown-item" href="/NurseDepartment/Main/Index"><i class="fas fa-user-nurse"></i>&nbsp;<strong>@Resources.LabelResources.NurseDepartment</strong></a>
+
+                    </div>
+
+
+
+                </li>
+                <li class="d-flex nav-item dropdown justify-content-center">
+                    <a class="nav-link dropdown-toggle justify-content-center" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>@Resources.ButtonResources.Trains</strong></a>
+                    <div class="dropdown-menu justify-content-center bg-light" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#"><i class="fas fa-book-reader"></i>&nbsp;<strong> @Resources.ButtonResources.Echo_Training</strong></a>
+                        <a class="dropdown-item " href="#"><i class="fab fa-youtube"></i>&nbsp;<strong>@Resources.ButtonResources.Training_Videos</strong></a>
+                        <a class="dropdown-item " href="#"><i class="fas fa-bullseye"></i>&nbsp;<strong>@Resources.ButtonResources.Guide_Lines </strong></a>
+
+                    </div>
+                </li>
+                <li class="nav-item mt-0">
+
+                    <a class="nav-link" href="/NurseDepartment/Main/ChangeCurrentCulture/1"> <img src="~/fonts/Icons/england.svg" class="img-width-height " /></a>
+
+
+
+
+
+
+
+
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-text" href="/NurseDepartment/Main/ChangeCurrentCulture/0"><img src="~/fonts/Icons/iran.svg" class="img-width-height " /></a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="/Account/Login" class="nav-link">
+                        <i class="fas fa-user-edit nav-link" title="@Resources.ButtonResources.Login @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology"></i>
+                    </a>
+
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @*@{
+                            Html.RenderAction("Login", "Account", new { @class = "col-12 d-block w-100" });
+                        }*@
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @*<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+
+                <figure class="carousel-item active">
+                    <img src="~/Content/Images/amani.jpg" class="d-block w-100" alt="@Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology">
+
+                    <figcaption class="carousel-caption">@Html.ActionLink(Resources.ButtonResources.Register_For_Congress, "Create", "CongressRegisterForms", null, new { @class = "btn btn-outline-light" })</figcaption>
+                </figure>
+
+                <figure class="carousel-item">
+                    <img src="~/Content/Images/poster-1.jpg" class="d-block w-100" alt="...">
+                    <figcaption class="carousel-caption">@Html.ActionLink(Resources.ButtonResources.Register_For_Congress, "Create", "CongressRegisterForms", null, new { @class = "btn btn-outline-light" })</figcaption>
+                </figure>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>*@
+
+
+    @RenderBody()
+
+
+
+
+
+    <footer class="mb-0 pb-0 mt-5 bg-white ">
+
+        <section class="container">
+            <section class="row">
+                <ul class="col-md-4 col-12 text-light none-lst-style">
+                    <li class="text-muted "><h3 class="text-center">@Resources.LabelResources.New_Articles</h3></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Articles, "Index", "Articles", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Books, "Index", "Books", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.LabelResources.Events, "Index", "Events", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li><strong>@Resources.ButtonResources.Login</strong></li>
+
+                </ul>
+                <ul class="col-md-4 col-12 text-light none-lst-style">
+                    <li class="text-muted"><h3 class="text-center">@Resources.LabelResources.Connection_Way</h3></li>
+                    <li class="mt-2 text-center"><strong>@Html.ActionLink(Resources.ButtonResources.Contact_with_Secretariat, "Contact_with_Secretariant", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.LabelResources.Contact_Info, "About_Us", "Home", null, new { @class = "text-dark    txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.About_Forum, "About_Forum", "Home", null, new { @class = "text-dark txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center "><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Contact_us, "Contact_Us", "Home", null, new { @class = "text-dark  txt-dcr " })</strong></li>
+                    @RenderSection("Footer", false)
+                </ul>
+                <ul class="col-md-4 col-12 none-lst-style text-center">
+                    <li><h3 class="text-muted text-center">@Resources.LabelResources.Official_Part</h3></li>
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Coricolum_Anesthetic_Heart, "Coricolum", "Home", null, new { @class = "text-dark txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Administrative_documentation, "DirectorBoard", "Home", new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.LabelResources.Home, "Index", "Home", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong>@Html.ActionLink(Resources.ButtonResources.Sign_up, actionName: "Register", controllerName: "Account", routeValues: null, htmlAttributes: new { @class = "text-success txt-dcr text-dark" })</strong></li>
+
+                    <li>
+
+                    </li>
+                </ul>
+                <ul class="col-md-4  col-12 none-lst-style">
+                    <li class="text-center mt-2 text-muted"><h3>@Resources.ButtonResources.Trains</h3></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Guide_Lines, "Guide_Lines", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Training_Videos, "Training_Videos", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Echo_Training, "Echo_Training", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+
+
+                </ul>
+                <ul class="col none-lst-style">
+
+                    <li>
+                        <section class="col-12 text-center">
+                            <span><i class="fas fa-map-marker-alt"></i>&nbsp;</span>
+                            <h3 class="text-muted ">@Resources.LabelResources.Address_Title</h3>
+                        </section>
+                        <address class="col-12 text-center" itemscope itemtype="http://schema.org/Organization">
+                            <strong class="text-center" itemprop="Address">
+                                @Resources.LabelResources.Address
+                            </strong>
+                        </address>
+
+
+                    </li>
+                </ul>
+
+                <ul class="col-md-4  col-12 none-lst-style">
+
+
+                    <li class="text-center mt-2 text-muted">
+                        <h3>@Resources.LabelResources.Related_Links</h3>
+                    </li>
+                    <li class="text-center mt-2"><strong><a href="https://www.iscs.org.ir">@Resources.LabelResources.Iran_Surgenos</a></strong></li>
+                    <li class="text-center mt-2"><a href="">@Resources.LabelResources.Iranian_Heart_Nurses</a></li>
+                    <li class="text-center mt-2"><a href="http://iransect.ir/">@Resources.LabelResources.Perfusionist_Society</a></li>
+                    <li class="text-center mt-2"><a href="http://csca.ir/">@Resources.LabelResources.Heart_Surgery</a></li>
+                    <li class="text-center mt-2"><a href="https://nritld.sbmu.ac.ir/">@Resources.LabelResources.Dn_Hsp</a></li>
+                    <li class="text-center mt-2"><a href="http://arc.sbmu.ac.ir/">@Resources.LabelResources.Anesthesiology_Research_Center</a></li>
+                    <li class="text-center mt-2">
+                        @Scripts.Render("https://cdn.zarinpal.com/trustlogo/v1/trustlogo.js")
+
+
+                    </li>
+                    <li class="col-12mb-0  pt-5">
+                        <em class="col-12 text-muted pb-0 container pt-5 col-12 text-center">
+                            <small class="col-12 text-center" itemscope itemtype="http://schema.org/Person"> <a href="mailto:https://mohammadjavadpousti@outlook.com" class="text-black-50" itemprop="author">@Resources.LabelResources.Author</a></small>
+                        </em>
+                    </li>
+
+                </ul>
+
+
+
+            </section>
+        </section>
+    </footer>
+
+    @Scripts.Render("https://code.jquery.com/jquery-3.4.1.min.js")
+    @Scripts.Render("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+    @Scripts.Render("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+    @Scripts.Render("https://kit.fontawesome.com/bc24eeb5ed.js")
+</body>
+</html>

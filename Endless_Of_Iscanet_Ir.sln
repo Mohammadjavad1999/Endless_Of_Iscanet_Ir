@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Endless_Of_Iscanet_Ir", "Endless_Of_Iscanet_Ir\Endless_Of_Iscanet_Ir.csproj", "{D529F050-E6D1-4A51-ABE0-4F0116FF2F96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Endless_Of_Iscanet_Ir.Tests", "Endless_Of_Iscanet_Ir.Tests\Endless_Of_Iscanet_Ir.Tests.csproj", "{1C5D9213-45BE-450D-B052-167B9A756E41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D529F050-E6D1-4A51-ABE0-4F0116FF2F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D529F050-E6D1-4A51-ABE0-4F0116FF2F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D529F050-E6D1-4A51-ABE0-4F0116FF2F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D529F050-E6D1-4A51-ABE0-4F0116FF2F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C5D9213-45BE-450D-B052-167B9A756E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C5D9213-45BE-450D-B052-167B9A756E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C5D9213-45BE-450D-B052-167B9A756E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C5D9213-45BE-450D-B052-167B9A756E41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

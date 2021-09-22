@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Models.Book>
+
+@{
+    Layout = "~/Views/Shared/_SiteIndexLayout.cshtml";
+}
+@section Metas{
+    <meta name="keywords" content="کتاب های انجمن بیهوشی قلب ایران ,کتاب های انجمن بیهوشی ,دکتر جهانگیری,دکتر محمد شیروانی,دکتر ,دکتر رسول فراست کیش,کتاب های علم بیهوشی قلب ,انجمن بیهوشی قلب ایران ,انجمن بیهوشی قلب" />
+    <meta name="description" content="صفحه دانلود کتاب های انجمن بیهوشی قلب ایران در سایت رسمی انجمن بیهوشی قلب ایران موجود میباشد شما میتوانید با ورود به این صفحه کتاب های مربوطه را دانلود و مطالعه بفرمایید.انجمن بیهوشی قلب ایران" />
+    <meta name="author" content="MohammadjavadPousti,محمد جواد پوستی" />
+}
+
+
+@section Header{
+<header>
+    }
+</header>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <figure class="carousel-item active">
+                            <img src="~/Content/Images/Books.jpg" class="d-block w-100" />
+                            <figcaption class="carousel-caption text-white"><h1>@Resources.LabelResources.Books @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</h1></figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+<div class="row">
+    <section class="container">
+        <div class="col-md-4 col-12 card text-center">
+            @foreach (var item in Model)
+            {
+
+                <div class="card-header">
+                    @Html.DisplayFor(modelItem => item.Book_writer)
+                </div>
+                <h5 class="card-title">
+                    @Html.DisplayFor(modelItem => item.Book_Title)
+                </h5>
+                <div class="card-body">
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Abstract_Description)</p>
+                    @Html.ActionLink("Details", "Details", new { id = item.BookId }, new { @class = "btn btn-outline-success d-block" })
+
+                </div>
+                <div class="card-footer text-muted">
+
+                    @*@Html.DisplayFor(modelItem => item.Book_Date)*@
+                </div>
+            }
+        </div>
+
+    </section>
+</div>
+
+
+<div class="col-12">
+
+
+    @section Footer{
+    </div>
+    }
+
+

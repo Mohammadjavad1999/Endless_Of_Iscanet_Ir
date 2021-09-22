@@ -1,0 +1,118 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>@Resources.LabelResources.About @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</title>
+    <meta name="keywords" content="@Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology,@Resources.NamesResources.Mohammad_Shirvani,@Resources.NamesResources.Alireza_Jahangiri,@Resources.NamesResources.Rasoul_Farasatkish,@Resources.NamesResources.Rasoul_Azarfarin" />
+    @Styles.Render("https://kit-free.fontawesome.com/releases/latest/css/free.min.css")
+    @Styles.Render("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+   @Styles.Render("~/Content/Custom.css")
+</head>
+<body>
+    <main class="container">
+
+        @*<header></header>*@
+        <article class="container">
+            <section class="row">
+                <h1 class="col-12 text-dark text-center">@Resources.LabelResources.About @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</h1>
+            </section>
+            <section class="row">
+                <p class="col-12 text-center container">
+                    @Resources.LabelResources.About_P1
+                </p>
+
+                <hr class="d-flex col-6 justify-content-center" />
+
+                <section class="row">
+                    <section class="container">
+                        <ol class="col-12 d-block">
+                            <li class="col-12"><strong>@Resources.LabelResources.About_Li1</strong></li>
+                            <li class="col-12"><strong>@Resources.LabelResources.About_Li2</strong></li>
+                            <li class="col-12"><strong>@Resources.LabelResources.About_Li3</strong></li>
+                            <li class="col-12"><strong>@Resources.LabelResources.About_Li4</strong></li>
+                            <li class="col-12"><strong>@Resources.LabelResources.About_Li5</strong></li>
+                        </ol>
+                    </section>
+                </section>
+                <hr class="d-flex col-6 justify-content-center" />
+                <section class="row">
+                    <p class="col-12 text-center">
+                        @Resources.LabelResources.About_P2
+                    </p>
+                </section>
+                <section class="row">
+                    <p class="col-12 text-center">
+                        @Resources.LabelResources.About_P3
+                    </p>
+                </section>
+            </section>
+        </article>
+      
+      
+</main>
+    <footer class="d-flex bg-white mb-0 pb-0 mt-5 ">
+
+        <section class="container">
+            <section class="row">
+
+                <ul class="col-md-4 col-12 text-light none-lst-style">
+                    <li class="text-muted "><h3 class="text-center">@Resources.LabelResources.New_Articles</h3></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Articles, "Index", "Articles", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Books, "Index", "Books", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.LabelResources.Events, "Index", "Events", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li><strong>@Resources.ButtonResources.Login</strong></li>
+
+                </ul>
+                <ul class="col-md-4 col-12 text-light none-lst-style">
+                    <li class="text-muted"><h3 class="text-center">@Resources.LabelResources.Connection_Way</h3></li>
+                    <li class="mt-2 text-center"><strong>@Html.ActionLink(Resources.ButtonResources.Contact_with_Secretariat, "Contact_with_Secretariant", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.LabelResources.Contact_Info, "About_Us", "Home", null, new { @class = "text-dark    txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.About_Forum, "About_Forum", "Home", null, new { @class = "text-dark txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center "><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Contact_us, "Contact_Us", "Home", null, new { @class = "text-dark  txt-dcr " })</strong></li>
+                    @*@RenderSection("Footer", false)*@
+                </ul>
+                <ul class="col-md-4 col-12 none-lst-style text-center">
+                    <li><h3 class="text-muted text-center">@Resources.LabelResources.Official_Part</h3></li>
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Coricolum_Anesthetic_Heart, "Coricolum_Anesthetic_Heart", "Home", null, new { @class = "text-dark txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Administrative_documentation, "Administrative_Documention", "Home", new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.LabelResources.Home, "Index", "Home", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong>@Html.ActionLink(Resources.ButtonResources.Sign_up, actionName: "Register", controllerName: "Account", routeValues: null, htmlAttributes: new { @class = "text-success txt-dcr text-dark" })</strong></li>
+
+                    <li>
+
+                    </li>
+                </ul>
+                <ul class="col-md-4  col-12 none-lst-style">
+                    <li class="text-center mt-2 text-muted"><h3>@Resources.ButtonResources.Trains</h3></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Guide_Lines, "Guide_Lines", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Training_Videos, "Training_Videos", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Echo_Training, "Echo_Training", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+
+
+                </ul>
+                <ul class="col none-lst-style">
+                    <li>
+                     
+                        
+                    </li>
+                    <li class="col d-flex justify-content-sm-center mb-0  pt-5">
+
+                        <em class="text-muted pb-0 container pt-5">
+                            <small> <a href="mailto:https://mohammadjavadpousti@outlook.com" class="text-black-50">@Resources.LabelResources.Author</a></small>
+                        </em>
+
+
+                    </li>
+
+                </ul>
+            </section>
+        </section>
+    </footer>
+
+    @Scripts.Render("https://code.jquery.com/jquery-3.4.1.min.js")
+    @Scripts.Render("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+    @Scripts.Render("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+    @Scripts.Render("https://kit.fontawesome.com/bc24eeb5ed.js")
+</body>
+</html>

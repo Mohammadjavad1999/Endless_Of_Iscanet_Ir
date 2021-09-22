@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Models.DocumentionGallery>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentRoute)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentRoute)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileType)
+        </td>
+        <td>
+            @Html.ActionLink(Resources.ButtonResources.Edit, "Edit", new { id=item.DocumentId }) |
+            @Html.ActionLink(Resources.ButtonResources.Details, "Details", new { id=item.DocumentId }) |
+            @Html.ActionLink(Resources.ButtonResources.Delete, "Delete", new { id=item.DocumentId })
+        </td>
+    </tr>
+}
+
+</table>

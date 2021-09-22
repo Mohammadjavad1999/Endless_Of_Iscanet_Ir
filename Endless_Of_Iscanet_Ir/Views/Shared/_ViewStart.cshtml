@@ -1,0 +1,8 @@
+﻿@if ((int)Session["CurrentCulture"] == 1)
+{
+    Layout = "~/Views/Shared/_SiteRtlLayout.cshtml";
+}
+else if ((int)Session["CurrentCulture"] == 0)
+{
+    Layout = "~/Views/Shared/_SiteLtrLayout.cshtml";
+}

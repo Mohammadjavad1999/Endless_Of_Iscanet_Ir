@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Models.CongressRegisterForm>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expert)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mediecial_Org_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfRegister)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Expert)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mediecial_Org_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfRegister)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ItemId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ItemId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ItemId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

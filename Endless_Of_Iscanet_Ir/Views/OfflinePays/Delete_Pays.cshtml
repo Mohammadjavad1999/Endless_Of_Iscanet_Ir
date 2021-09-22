@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Models.OfflinePay>
+
+@{
+    ViewBag.Title = "Delete_Pays";
+    Layout = "~/Views/Shared/_SiteUserLayout.cshtml";
+}
+
+<h2>Delete_Pays</h2>
+
+
+
+<h2 class="col-12 text-center text-muted border-bottom border-success pb-4">@Resources.ButtonResources.Delete @Resources.LabelResources.Events</h2>
+
+
+@Html.ActionLink(Resources.ButtonResources.Create + " " + Resources.LabelResources.Events, "Create", null, new { @class = "col-6 container d-flex justify-content-center mt-5 mb-3 btn btn-outline-primary" })
+
+
+
+
+
+@foreach (var item in Model)
+{
+
+    <div class="card col-lg-6 col-md-12 justify-content-center container mt-2 mb-2 border-bottom pb-2">
+        <div class="card-header-pills col-12 d-block ">
+            <h4 class="card-title">@Html.DisplayFor(modelItem => item.FullName)</h4>
+        </div>
+        <section class="col-12 card-body">
+            <p class="card-text">
+                <h6 class="text-muted">@Resources.LabelResources.Title :</h6>
+
+                @Html.DisplayFor(modelItem => item.Expert)
+            </p>
+            <p class="card-text">
+                <h6 class="text-muted">@Resources.LabelResources.Description :</h6>
+                @Html.DisplayFor(modelItem => item.Medec_Org_Id)
+            </p>
+            <p class="card-text">
+                <h6 class="text-muted">@Resources.LabelResources.Date_Of_Publish :</h6>
+
+                @Html.DisplayFor(modelItem => item.Pay_Id)
+            </p>
+            <p class="card-text">
+                @Html.DisplayFor(modelItem => item.Postal_Code)
+            </p>
+            <p class="card-text">
+                <h6 class="text-muted">@Resources.LabelResources.File :</h6>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </p>
+        </section>
+
+        @*<td>
+                @Html.DisplayFor(modelItem => item.CommentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DocumentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IndexItemId)
+            </td>
+        *@
+
+        @*@Html.ActionLink("Edit", "Edit", new { id=item.ArticleId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ArticleId }) |*@
+        <div class="card-footer bg-transparent">
+            @Html.ActionLink(Resources.ButtonResources.Delete, "Delete", new { id = item.OfflinePayId }, new { @class = "btn btn-outline-success d-block w-100" })
+        </div>
+    </div>
+}
+
+
+@section Footer{
+    <footer>
+}
+</footer>

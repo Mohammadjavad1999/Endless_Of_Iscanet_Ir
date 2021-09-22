@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Models.LastNews>
+
+@{
+    ViewBag.Title = "DeleteLastNews";
+    Layout = "~/Views/Shared/_SiteUserLayout.cshtml";
+}
+
+<h2>DeleteLastNews</h2>
+
+
+
+<h2 class="col-12 text-center text-muted border-bottom border-success pb-4">@Resources.ButtonResources.Delete @Resources.LabelResources.Events</h2>
+
+
+@foreach (var item in Model)
+{
+
+    <div class="card col-lg-6 col-md-12 justify-content-center container mt-2 mb-2 border-bottom pb-2">
+        <div class="card-header-pills col-12 d-block ">
+            <h4 class="card-title">@Html.DisplayFor(modelItem => item.News_Writer)</h4>
+        </div>
+        <section class="col-12 card-body">
+            <p class="card-text">
+                <h6 class="text-muted">@Resources.LabelResources.Title :</h6>
+
+                @Html.DisplayFor(modelItem => item.LastNews_Title)
+            </p>
+            <p class="card-text">
+                <h6 class="text-muted">@Resources.LabelResources.Description :</h6>
+                @Html.DisplayFor(modelItem => item.Abstract_Description)
+            </p>
+            <p class="card-text">
+                <h6 class="text-muted">@Resources.LabelResources.Date_Of_Publish :</h6>
+
+                @Html.DisplayFor(modelItem => item.LastNews_Date)
+            </p>
+            <p class="card-text">
+                @Html.DisplayFor(modelItem => item.Abstract_Description)
+            </p>
+            <p class="card-text">
+                <h6 class="text-muted">@Resources.LabelResources.File :</h6>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </p>
+        </section>
+
+       
+        <div class="card-footer bg-transparent">
+            @Html.ActionLink(Resources.ButtonResources.Delete, "Delete", new { id = item.LastNewsId }, new { @class = "btn btn-outline-success d-block w-100" })
+        </div>
+    </div>
+}
+
+
+@section Footer{
+    <footer>
+}
+</footer>

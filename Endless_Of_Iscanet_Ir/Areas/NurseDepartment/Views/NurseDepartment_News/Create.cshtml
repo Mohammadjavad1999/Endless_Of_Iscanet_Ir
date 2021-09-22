@@ -1,0 +1,69 @@
+﻿@model Models.NurseDep_News
+
+@{
+    Layout = "~/Views/Shared/_SiteUserLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Resources.ButtonResources.Create @Resources.LabelResources.LastNews @Resources.LabelResources.Of @Resources.LabelResources.NurseDepartment @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <h1 class="text-muted text-center mt-2" style="font-size:30px;">
+      @Resources.LabelResources.LastNews @Resources.LabelResources.Of @Resources.LabelResources.NurseDepartment @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology
+        </h1>
+        <hr class="text-center col-6" />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-warning" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.News_Title, htmlAttributes: new { @class = "col col-control-label text-center" })
+            <div class="col-12">
+                @Html.EditorFor(model => model.News_Title, new { htmlAttributes = new { @class = "form-control text-center" } })
+                @Html.ValidationMessageFor(model => model.News_Title, "", new { @class = "text-warning" })
+            </div>
+        </div>
+
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.News_Author, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.News_Author, new { htmlAttributes = new { @class = "form-control text-center" } })
+                    @Html.ValidationMessageFor(model => model.News_Author, "", new { @class = "text-warning" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.News_Abstract, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.News_Abstract,  new { @class = "form-control" } )
+                    @Html.ValidationMessageFor(model => model.News_Abstract, "", new { @class = "text-warning" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.News_Description, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.News_Description,  new { @class = "form-control text-center" } )
+                    @Html.ValidationMessageFor(model => model.News_Description, "", new { @class = "text-warning" })
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <div class="col-12">
+                    <input type="submit" value="Create" class="btn btn-outline-success col-12 form-control" />
+                </div>
+            </div>
+
+    }
+
+  
+</body>
+</html>

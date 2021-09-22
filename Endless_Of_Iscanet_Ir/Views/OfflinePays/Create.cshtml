@@ -1,0 +1,215 @@
+﻿@model Models.OfflinePay
+
+@{
+    Layout = "~/Views/Shared/_SiteFormLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+@section Metas{
+    <meta name="keywords" content="پرداخت کارت به کارت,پرداخت حق عضویت انجمن بیهوشی قلب ایران,پرداخت حق عضویت انجمن بیهوشی,پرداخت حق عضویت,حق عضویت,حق عضویت انجمن بیهوشی قلب ایران,حق عضویت انجمن بیهوشی" />
+    <meta name="description" content="در این صفحه میتوانید پرداخت کارت به کارت انجام دهید .اگر مایل بودید با اگر با درگاه های پرداخت آنلاین دچار مشکل شدید با وارد کردن اطلاعات مربوطه میتوانید پرداخت به صورت کارت به کارت انجام دهید" />
+    <meta name="author" content="MohammadjavadPousti" />
+}
+
+@section Title{
+    <title>@Resources.LabelResources.Offline_Payment @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</title>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <h1 class="text-black-50 text-center headline-font">
+        @Resources.LabelResources.Offline_Payment @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology
+    </h1>
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "col col-control-label text-center" })
+        <div class="col-12">
+            @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Fathersname, htmlAttributes: new { @class = "col col-control-label text-center" })
+            <div class="col-12">
+                @Html.EditorFor(model => model.Fathersname, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Fathersname, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "col col-control-label text-center " })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Pay_Id, htmlAttributes: new { @class = "col col-control-label text-center d-none" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Pay_Id, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Pay_Id, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Born_Place, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Born_Place, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Born_Place, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Born_Date, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Born_Date, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Born_Date, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Medec_Org_Id, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Medec_Org_Id, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Medec_Org_Id, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Postal_Code, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Postal_Code, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Postal_Code, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Expert, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Expert, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Expert, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.StaticPhone, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.StaticPhone, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.StaticPhone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Description,  new { @class = "form-control" } )
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="d-flex justify-content-center col-md-4">
+                    <input type="submit" value="@Resources.ButtonResources.Sign_up" class="btn btn-success col-12 w-100 d-flex justify-content-center" />
+                </div>
+            </div>
+
+}
+@section Footer{
+    <footer class="d-flex bg-white mb-0 pb-0 mt-5 ">
+
+        <section class="container">
+            <section class="row">
+
+                <ul class="col-md-4 col-12 text-light none-lst-style">
+                    <li class="text-muted "><h3 class="text-center">@Resources.LabelResources.New_Articles</h3></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Articles, "Index", "Articles", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Books, "Index", "Books", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.LabelResources.Events, "Index", "Events", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li><strong>@Resources.ButtonResources.Login</strong></li>
+
+                </ul>
+                <ul class="col-md-4 col-12 text-light none-lst-style">
+                    <li class="text-muted"><h3 class="text-center">@Resources.LabelResources.Connection_Way</h3></li>
+                    <li class="mt-2 text-center"><strong>@Html.ActionLink(Resources.ButtonResources.Contact_with_Secretariat, "Contact_with_Secretariant", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.LabelResources.Contact_Info, "About_Us", "Home", null, new { @class = "text-dark    txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.About_Forum, "About_Forum", "Home", null, new { @class = "text-dark txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center "><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Contact_us, "Contact_Us", "Home", null, new { @class = "text-dark  txt-dcr " })</strong></li>
+                   
+                </ul>
+                <ul class="col-md-4 col-12 none-lst-style text-center">
+                    <li><h3 class="text-muted text-center">@Resources.LabelResources.Official_Part</h3></li>
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Coricolum_Anesthetic_Heart, "Coricolum_Anesthetic_Heart", "Home", null, new { @class = "text-dark txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Administrative_documentation, "Administrative_Documention", "Home", new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.LabelResources.Home, "Index", "Home", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong>@Html.ActionLink(Resources.ButtonResources.Sign_up, actionName: "Register", controllerName: "Account", routeValues: null, htmlAttributes: new { @class = "text-success txt-dcr text-dark" })</strong></li>
+
+                    <li>
+
+                    </li>
+                </ul>
+                <ul class="col-md-4  col-12 none-lst-style">
+                    <li class="text-center mt-2 text-muted"><h3>@Resources.ButtonResources.Trains</h3></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Guide_Lines, "Guide_Lines", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Training_Videos, "Training_Videos", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Echo_Training, "Echo_Training", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+
+
+                </ul>
+                <ul class="col none-lst-style">
+                    <li>
+                        <section class="col-12 text-center">
+                            <span><i class="fas fa-map-marker-alt"></i>&nbsp;</span>
+                            <h3 class="text-muted ">@Resources.LabelResources.Address_Title</h3>
+                        </section>
+                        <address class="col-12 text-center" itemscope itemtype="http://schema.org/Organization">
+                            <strong class="text-center" itemprop="Address">@Resources.LabelResources.Address</strong>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51804.36407560958!2d51.4416692174042!3d35.75638982192025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0787d0b7c7fb%3A0x55e7f04ca115b7f1!2z2KfZhtis2YXZhiDYqNuM2YfZiNi024wg2YLZhNioINin24zYsdin2YY!5e0!3m2!1sfa!2ses!4v1561713701239!5m2!1sfa!2ses" class="col-12 d-block" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </address>
+
+                        <section />
+                    </li>
+                    <li class="col-12mb-0  pt-5">
+
+                        <em class="col-12 text-muted pb-0 container pt-5 col-12 text-center">
+                            <small class="col-12 text-center" itemscope itemtype="http://schema.org/Person">> <a href="mailto:https://mohammadjavadpousti@outlook.com" class="text-black-50" itemprop="author">@Resources.LabelResources.Author</a></small>
+                        </em>
+
+
+                    </li>
+
+                </ul>
+            </section>
+        </section>
+    </footer>
+}
+

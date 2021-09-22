@@ -1,0 +1,65 @@
+﻿@RenderBody()
+@RenderSection("Footer")
+<footer class="d-flex bg-white mb-0 pb-0 mt-5 ">
+
+    <section class="container">
+        <section class="row justify-content-md-center">
+
+            <ul class="col-md-4 col-12 text-light none-lst-style">
+                <li class="text-muted"><h3>@Resources.LabelResources.New_Articles</h3></li>
+                <li class="mt-2"><i class="fas fa-caret-left"></i><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Articles, "Index", "Articles", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                <li class="mt-2"><i class="fas fa-caret-left"></i><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Books, "Index", "Books", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                <li class="mt-2"><i class="fas fa-caret-left"></i><strong class="text-success">@Html.ActionLink(Resources.LabelResources.Events, "Index", "Events", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                <li><i class="fas fa-caret-right"></i><strong>@Resources.ButtonResources.Login</strong></li>
+
+            </ul>
+            <ul class="col-md-4 col-12 text-light none-lst-style">
+                <li class="text-muted"><h3>@Resources.LabelResources.Connection_Way</h3></li>
+                <li class="mt-2"><i class="fas fa-caret-left"></i><strong>@Html.ActionLink(Resources.ButtonResources.Contact_with_Secretariat, "Contact_with_Secretariant", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+
+                <li class="mt-2"><i class="fas fa-caret-left"></i><strong class="text-success">@Html.ActionLink(Resources.LabelResources.Contact_Info, "About_Us", "Home", null, new { @class = "text-dark    txt-dcr " })</strong></li>
+                <li class="mt-2"><i class="fas fa-caret-left"></i><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.About_Forum, "About_Forum", "Home", null, new { @class = "text-dark txt-dcr " })</strong></li>
+                <li class="mt-2"><i class="fas fa-caret-left"></i><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Contact_us, "Contact_Us", "Home", null, new { @class = "text-dark  txt-dcr " })</strong></li>
+
+            </ul>
+            <ul class="col-md-4 col-12 none-lst-style flex-md-column-reverse justify-content-md-center">
+                <li class="mt-2 justify-content-md-center"><i class="fas fa-caret-left justify-content-md-center"></i><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Coricolum_Anesthetic_Heart, "Coricolum_Anesthetic_Heart", "Home", null, new { @class = "text-dark txt-dcr " })</strong></li>
+                <li class="mt-2 justify-content-md-center"><i class="fas fa-caret-left justify-content-md-center"></i><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Administrative_documentation, "Administrative_Documention", "Home", new { @class = "text-dark txt-dcr" })</strong></li>
+                <li class="mt-2 justify-content-md-center"><i class="fas fa-caret-left justify-content-md-center"></i><strong class="justify-content-md-center">@Html.ActionLink(Resources.LabelResources.Home, "Index", "Home", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                <li class="mt-2 justify-content-md-center"><i class="fas-fa caret-right"></i><strong>@Html.ActionLink(Resources.ButtonResources.Sign_up, actionName: "Register", controllerName: "Account", routeValues: null, htmlAttributes: new { @class = "text-success txt-dcr text-dark" })</strong></li>
+
+                <li>
+
+                </li>
+            </ul>
+            <ul class="col-md-4  col-12 none-lst-style">
+                <li class="mt-2 text-muted"><h3>@Resources.ButtonResources.Trains</h3></li>
+                <li class="mt-2"><i class="fas fa-caret-left"></i><strong>@Html.ActionLink(Resources.ButtonResources.Guide_Lines, "Guide_Lines", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+                <li class="mt-2"><i class="fas fa-caret-left"></i><strong>@Html.ActionLink(Resources.ButtonResources.Training_Videos, "Training_Videos", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+                <li class="mt-2"><i class="fas fa-caret-left"></i><strong>@Html.ActionLink(Resources.ButtonResources.Echo_Training, "Echo_Training", "Home", null, new { @class = "text-dark txt-dcr" })</strong></li>
+
+
+            </ul>
+            <ul class="col none-lst-style">
+                <li>
+                 
+                       @{
+                            Html.RenderAction("Login", "Account");
+                        }
+                    
+                </li>
+                <li class="col d-flex justify-content-sm-center mb-0  pt-5">
+
+                    <em class="text-muted pb-0 container pt-5">
+                        <small> <a href="mailto:https://mohammadjavadpousti@outlook.com" class="text-black-50">@Resources.LabelResources.Author</a></small>
+                    </em>
+
+
+                </li>
+
+            </ul>
+        </section>
+    </section>
+</footer>
+
+

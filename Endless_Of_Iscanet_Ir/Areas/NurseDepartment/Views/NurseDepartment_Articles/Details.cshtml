@@ -1,0 +1,67 @@
+﻿@model Models.NurseDep_Article
+
+@{
+    Layout = "~/Views/Shared/_SiteDetailsLayout.cshtml";
+}
+
+@section Metas{
+    <meta name="description" content="@Model.Description" />
+    <meta name="keywords" content="@Model.Title,@Resources.LabelResources.NurseDepartment,@Resources.LabelResources.NurseDepartment @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology,@Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology,@Resources.LabelResources.EductionCourse,@Resources.LabelResources.EductionCourse @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology" />
+    <meta name="author" content="@Model.Author" />
+
+}
+@section Title{
+    <title>@Model.Title | @Resources.LabelResources.NurseDepartment @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</title>
+
+}
+<main>
+    <article class="container" itemscope itemtype="http://schema.org/Article">
+        <header>
+            <figure itemprop="headline">
+                <img src="~/Areas/NurseDepartment/Content/Files/Education_Course/@Model.FileName" alt="@Model.Title" />
+                <figcaption>
+
+                </figcaption>
+            </figure>
+            <hr class="col-6 container text-center" />
+            <section class="col-12">
+                <h1 class="text-center mt-3 headline-font">
+                    @Html.DisplayFor(model => model.Title)
+
+
+                </h1>
+            </section>
+
+        </header>
+        <section class="col-12 container">
+            <p class="text-justify" itemprop="about">
+                @Html.DisplayFor(model => model.Description)
+
+
+            </p>
+        </section>
+        <section class="col-12 container ">
+            <p class="col-12 text-justify" itemprop="description">
+                @Html.DisplayFor(model => model.Description)
+            </p>
+        </section>
+
+    </article>
+    <aside>
+        <section class="col-12 container" itemscope itemtype="http://schema.org/BlogPosting">
+            <time class="text-right" itemprop="datePublished">
+
+                @Html.DisplayFor(model => model.Date)
+
+
+            </time>
+        </section>
+        <section class="col-4" itemscope itemtype="http://schema.org/Person">
+            <h3 class="col-12 text-left" itemprop="name">
+                @Html.DisplayFor(model => model.Author)
+
+
+            </h3>
+        </section>
+    </aside>
+</main>

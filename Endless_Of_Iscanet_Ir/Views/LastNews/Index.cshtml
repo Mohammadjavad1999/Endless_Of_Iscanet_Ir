@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Models.LastNews>
+@using System.Globalization;
+@{
+    Layout = "~/Views/Shared/_SiteIndexLayout.cshtml";
+}
+
+@section Metas{
+    <meta name="author" content="Mohammadjavad Pousti,محمد جواد پوستی" />
+    <meta name="description" content="وب سایت رسمی انجمن بیهوشی قلب ایران قسمت آخرین اخبار. دراین قسمت میتوانید از آخرین اخبار مربوط به انجمن بیهوشی قلب ایران باخبر شوید" />
+    <meta name="keywords" content="آخرین اخبار انجمن بیهوشی قلب,آخرین اخبار انجمن بیهوشی قلب ایران
+          ,انجمن بیهوشی قلب ایران,وب سایت رسمی انجمن بیهوشی قلب ایران,انجمن بیهوشی قلب 
+          ,دکتر علی رضا جهانگیری ,دکتر محمد شیروانی,دکتر علوی ,دکتر سول فراست کیش
+          دکتر علی دباغ," />
+    }
+@section Title{
+    <title>@Resources.LabelResources.LastNews @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</title>
+    }
+
+
+    <div class="row">
+        <div class="col-12">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <figure class="carousel-item active">
+                        <img src="~/Content/Images/LastNews.jpg" class="d-block w-100" alt="@Resources.LabelResources.LastNews @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology" />
+                        <figcaption class="carousel-caption"><a href="#" class="btn btn-outline-light btn-lg">@Resources.LabelResources.LastNews</a></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="row">
+
+            <section class="col-12 text-center mb-2"><h1>@Resources.LabelResources.LastNews @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology </h1></section>
+            <section class="col-12 container text-center"><hr /></section>
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-12 d-block">
+                    <div class="card">
+
+                        <figure class="card-header border-0 bg-transparent">
+                            <img src="~/Content/Files/LastNewsFiles/@item.FileName" class="card-img-top d-block w-100" />
+                            @*<figcaption>@Resources.LabelResources.LastNews @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</figcaption>*@
+                        </figure>
+                        <section class="card-body">
+
+                            <h3 class="card-title">
+                                @Html.DisplayFor(modelItem => item.LastNews_Title)
+                            </h3>
+                            <article class="card-text text-truncate">
+                                <h6>
+                                    @Html.DisplayFor(modelIte => item.Abstract_Description)
+                                </h6>
+
+
+
+                            </article>
+                            <div class="card-footer bg-transparent d-block col-12">
+                                @Html.ActionLink(Resources.ButtonResources.Details, "Details", new { id = item.LastNewsId }, new { @class = "btn btn-outline-success btn-round d-block w-100 " })
+                                <time class="text-black-50">
+                                    @Html.DisplayFor(modelItem => item.LastNews_Date)
+                                </time>
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.LastNewsId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.LastNewsId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.LastNewsId })*@
+
+
+
+
+            }
+        </div>
+
+
+
+
+    </div>
+
+

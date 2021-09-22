@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Models.Event>
+
+@{
+    Layout = "~/Views/Shared/_SiteIndexLayout.cshtml";
+}
+
+
+@section Metas{
+    <meta name="keywords" content="@Resources.LabelResources.Events @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology,@Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology,@Resources.LabelResources.LastNews @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology" />
+    <meta name="description" content="@Resources.LabelResources.Events @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology" />
+    <meta name="author" content="@Resources.LabelResources.Author" />
+}
+
+@section Title{
+    <title>@Resources.LabelResources.Events @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</title>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <figure class="carousel-item active">
+                    <img src="~/Content/Images/Events.jpg" class="d-block w-100" alt="@Resources.LabelResources.Events @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology" />
+                    <figcaption class="carousel-caption"><a href="#" class="btn btn-outline-dark d-block btn-round">@Resources.LabelResources.Events</a></figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="row">
+
+            <div class="card col-12 col-md-6" itemscope itemtype="http://schema.org/BlogPosting">
+
+                <figure class="card-header" itemscope itemtype="http://schema.org/Photograph">
+                    <img src="~/Content/Files/EventFiles/@item.FileName" alt="@Resources.LabelResources.Events @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology | @item.Event_Title" class="card-img-top d-block w-100 " itemprop="photo" />
+                    <figcaption class="card-title" itemprop="about">
+                        @Html.DisplayFor(modelItem => item.Event_Title)
+                    </figcaption>
+                </figure>
+
+
+                <section class="card-body" itemprop="text">
+                    <p class="card-text text-truncate">
+                        @Html.DisplayFor(modelItem => item.Abstract_Description)
+                    </p>
+                </section>
+                <section class="col-12" itemscope itemtype="http://schema.org/Person">
+                    <em class="text-center text-white-50" itemprop="name">
+                        @Html.DisplayFor(modelItem => item.Event_Writer)
+
+
+                    </em>
+
+
+                </section>
+
+
+
+                <div class="col-6">
+                    <section>
+                        <time class="text-center text-muted" itemprop="dateCreated">
+                            @Html.DisplayFor(modelItem => item.Event_Date)
+
+
+                        </time>
+                    </section>
+                </div>
+                <div class="card-footer col-12 bg-transparent">
+                    @Html.ActionLink(Resources.ButtonResources.Details, "Details", new { id = item.EventId }, new { @class = "btn btn-outline-success d-block" })
+                </div>
+
+            </div>
+        </div>
+
+    }
+</div>
+

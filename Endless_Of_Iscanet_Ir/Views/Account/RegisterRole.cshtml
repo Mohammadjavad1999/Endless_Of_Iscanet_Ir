@@ -1,0 +1,37 @@
+﻿@model Endless_Of_Iscanet_Ir.Models.RegisterViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RegisterRole</title>
+</head>
+<body>
+    @using (Html.BeginForm("RegisterRole", "Account", FormMethod.Post, new { role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Label("selectRole")
+        <br />
+        @Html.DropDownList("UserName")
+        <div>
+            @Html.Label("Select User")
+        </div>
+        <div>
+            @Html.DropDownList("Name")
+        </div>
+        <input type="submit" value="Register" />
+    }
+    <div> 
+    </div>
+    @section scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+        }
+      
+        
+        
+</body>
+</html>

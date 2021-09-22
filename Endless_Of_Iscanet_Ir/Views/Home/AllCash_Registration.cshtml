@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "AllCash_Registration";
+    Layout = "~/Views/Shared/_SiteIndexLayout.cshtml";
+}
+@section Metas{ }
+@section Title{
+    <title>
+        @Resources.LabelResources.Registration_Title
+    </title>
+    }
+@section Header{
+    <header>
+
+
+}
+</header>
+<h1 class="col-12 text-center">
+  @Resources.LabelResources.Registration_Title
+</h1>
+<hr class="col-6 container text-center mt-3 mb-2" />
+
+<section class="col-12 d-flex justify-content-center"> 
+    <p class="col-12 text-center">
+        @Resources.LabelResources.AllCash_Des
+        <a href="/Home/Payment" class="col-12 btn btn-outline-warning d-block w-100 text-center"><i class="fas fa-money-bill-alt"></i>&nbsp;&nbsp;@Resources.LabelResources.Online_Pay</a>
+    </p>
+
+</section>
+<hr class="col-6 container text-center mt-5 mb-5" />
+
+<section class="col-12">
+
+    <h2 class="col-12 text-center text-justify text-danger">
+        @Resources.LabelResources.Offline_Payment_Title
+</h2>
+    <p class="col-12 text-justify text-muted ">
+        @Resources.LabelResources.Offline_Payment_Des
+        <i class="fas fa-credit-card"></i> 
+        @Html.ActionLink(Resources.LabelResources.Offline_Pay,actionName: "Create", controllerName:"OfflinePays",routeValues: null,htmlAttributes: new { @class = "col-12 text-center btn btn-outline-primary d-block w-100" })
+    </p>
+    <hr class="col-6 container text-center mt-5 mb-5" />
+
+
+
+</section>
+<section class="col-12 ">
+  
+    <p class="col-12 text-justify text-muted">
+        @Resources.LabelResources.Offline_Payment_Inf
+    </p>
+</section>
+

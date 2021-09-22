@@ -1,0 +1,203 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    @RenderSection("Title", false)
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+@Styles.Render("~/Content/Custom.css")
+
+</head>
+<body>
+
+    @RenderSection("Header", false)
+
+
+
+
+
+    <nav class="d-flex navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="/Home/Index"><img src="~/Content/Images/HeartAnstiasiology.png" style="width:45px;height:45px;" alt="Alternate Text" /></a>
+        <button class="navbar-toggler" id="nvb-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse ">
+            <ul class="navbar-nav mr-auto justify-content-center ">
+                @*<li class="nav-item active  justify-content-center">
+                        <a class="nav-link d-flex  justify-content-center" href="#"> <span class="sr-only">(current)</span></a>
+                    </li>*@
+                <li class="nav-item justify-content-center active text-white">
+                    <a class="nav-link d-flex justify-content-center" href="/Articles/Create" tabindex="-1" aria-disabled="true"><strong> @Resources.ButtonResources.Articles</strong></a>
+                </li>
+                <li class="nav-item justify-content-center">
+                    <a class="nav-link d-flex justify-content-center" href="/Books/Create" tabindex="-1" aria-disabled="true"> <strong> @Resources.ButtonResources.Books</strong></a>
+                </li>
+                <li class="nav-item justify-content-center">
+                    <a class="nav-link d-flex justify-content-center" href="~/Events/Create" tabindex="-1" aria-disabled="true"><strong> @Resources.LabelResources.Events</strong></a>
+                </li>
+                <li class="d-flex nav-item dropdown justify-content-center">
+                    <a class="nav-link dropdown-toggle justify-content-center" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-sign-out-alt"></i><strong>@Resources.ButtonResources.Logout</strong></a>
+                    <div class="dropdown-menu justify-content-center bg-light" aria-labelledby="dropdownId">
+
+                        <a class="dropdown-item" href="/Home/Contact_Secratariant"><i class="fas fa-mail-bulk"></i>&nbsp;<strong>@Resources.ButtonResources.Contact_with_Secretariat</strong></a>
+                        <a class="dropdown-item" href="#" download><i class="fas fa-gavel"></i>&nbsp;<strong>@Resources.ButtonResources.Statute</strong></a>
+                        <a class="dropdown-item" href="/Home/DirectorBoard"><i class="fas fa-users"></i>&nbsp;<strong>@Resources.ButtonResources.Organization_Chart_and_Board</strong></a>
+                        <a class="dropdown-item" href="/Home/Members"><i class="fas fa-user-md"></i>&nbsp;<strong>@Resources.LabelResources.Members_of_the_Anesthesiology_Society_of_Iran</strong></a>
+                        <a class="dropdown-item" href="/Home/Adminstrative_documentiation"><i class="far fa-envelope"></i>&nbsp;<strong>@Resources.ButtonResources.Administrative_documentation</strong></a>
+                        <a class="dropdown-item" href="/NurseDepartment/Main/Index"><i class="fas fa-user-nurse"></i>&nbsp;<strong>@Resources.LabelResources.NurseDepartment</strong></a>
+
+                    </div>
+
+
+                </li>
+                <li class="d-flex nav-item dropdown justify-content-center">
+                    <a class="nav-link dropdown-toggle justify-content-center" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>@Resources.ButtonResources.Trains</strong></a>
+                    <div class="dropdown-menu justify-content-center bg-light" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#"><i class="fas fa-book-reader"></i>&nbsp;<strong> @Resources.ButtonResources.Echo_Training</strong></a>
+                        <a class="dropdown-item " href="#"><i class="fab fa-youtube"></i>&nbsp;<strong>@Resources.ButtonResources.Training_Videos</strong></a>
+                        <a class="dropdown-item " href="#"><i class="fas fa-bullseye"></i>&nbsp;<strong>@Resources.ButtonResources.Guide_Lines </strong></a>
+
+                    </div>
+                </li>
+                <li class="nav-item mt-0">
+
+                    <a class="nav-link" href="/Home/ChangeCurrentCulture/1"> <img src="~/fonts/Icons/england.svg" class="img-width-height " /></a>
+
+
+
+
+
+
+
+
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-text" href="/Home/ChangeCurrentCulture/0"><img src="~/fonts/Icons/iran.svg" class="img-width-height " /></a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="/Account/Login" class="nav-link">
+                        <i class="fas fa-user-edit nav-link" title="@Resources.ButtonResources.Login @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology"></i>
+                    </a>
+
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @*@{
+                            Html.RenderAction("Login", "Account", new { @class = "col-12 d-block w-100" });
+                        }*@
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @*This Layout Made For Forms Page*@
+    @*Using Bootstrap*@
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                @RenderBody()
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="d-flex bg-white mb-0 pb-0 mt-5 ">
+
+        <section class="container">
+            <section class="row">
+
+                <ul class="col-md-4 col-12 text-light none-lst-style">
+                    <li class="text-muted "><h3 class="text-center">@Resources.LabelResources.Articles</h3></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Articles, "Delete", "Articles", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Books, "Edit", "Books", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.LabelResources.Events, "Create", "Events", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li><strong>@Resources.ButtonResources.Login</strong></li>
+
+                </ul>
+                <ul class="col-md-4 col-12 text-light none-lst-style">
+                    <li class="text-muted"><h3 class="text-center">@Resources.LabelResources.Books</h3></li>
+              
+
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Create, "Create", "Books", null, new { @class = "text-dark    txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center"><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Edit, "Edit", "Books", null, new { @class = "text-dark txt-dcr " })</strong></li>
+                    <li class="mt-2 text-center "><strong class="text-success">@Html.ActionLink(Resources.ButtonResources.Delete, "Delete", "Books", null, new { @class = "text-dark  txt-dcr " })</strong></li>
+                    @RenderSection("Footer", false)
+                </ul>
+                <ul class="col-md-4 col-12 none-lst-style text-center">
+                    <li><h3 class="text-muted text-center">@Resources.LabelResources.LastNews</h3></li>
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Create, "Index", "LastNews", null, new { @class = "text-dark txt-dcr " })</strong></li>
+                    @*<li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Edit, "I", "LastNews", new { @class = "text-dark txt-dcr" })</strong></li>*@
+                    <li class="mt-2 text-center"><strong class="justify-content-md-center">@Html.ActionLink(Resources.ButtonResources.Delete, "DeleteLastNews", "LastNews", null, new { @class = "text-dark txt-dcr none-lst-style" })</strong></li>
+                    <li class="mt-2 text-center"><strong>@Html.ActionLink(Resources.LabelResources.NurseDepartment, actionName: "Create", controllerName: "Main", routeValues: null, htmlAttributes: new { @class = "text-success txt-dcr text-dark" })</strong></li>
+
+                    <li>
+
+                    </li>
+                </ul>
+                <ul class="col-md-4  col-12 none-lst-style">
+                    <li class="text-center mt-2 text-muted"><h3>@Resources.LabelResources.NurseDepartment</h3></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.LabelResources.NurseDepartment_News, "Create", "NurseDepartment_News", new {Area="NurseDepartment" }, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.LabelResources.NurseDepartment_Articles, "Create", "NurseDpartment_Articles", new { Area="NurseDepartment" }, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.LabelResources.NurseDpartment_Book, "Create", "NurseDepartment_Book", new { Area="NurseDepartment"}, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.LabelResources.NurseDepartment_Congress, "Create", "NurseDepartment_Congress", new { Area = "NurseDepartment" }, new { @class = "text-dark txt-dcr" })</strong></li>
+
+
+
+                </ul>
+                <ul class="col none-lst-style">
+                    <li class="text-center mt-2 text-muted"><h3>@Resources.LabelResources.Events</h3></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Create, "Create", "Events", null, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Edit, "Edit", "Events", null, new { @class = "text-dark txt-dcr" })</strong></li>
+                    <li class="text-center mt-2"><strong>@Html.ActionLink(Resources.ButtonResources.Delete, "DeleteEvents", "Events", null, new { @class = "text-dark txt-dcr" })</strong></li>
+
+                    <li class="col-12mb-0  pt-5">
+
+                        <em class="col-12 text-muted pb-0 container pt-5 col-12 text-center">
+                            <small class="col-12 text-center" itemscope itemtype="http://schema.org/Person">> <a href="mailto:https://mohammadjavadpousti@outlook.com" class="text-black-50" itemprop="author">@Resources.LabelResources.Author</a></small>
+                        </em>
+
+
+                    </li>
+
+                </ul>
+            </section>
+        </section>
+    </footer>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+</body>
+</html>

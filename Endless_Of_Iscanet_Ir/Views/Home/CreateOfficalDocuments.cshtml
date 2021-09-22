@@ -1,0 +1,16 @@
+﻿@model Models.OfficialLetter
+    <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("CreateOfficalDocuments", "Home",FormMethod.Post,new { enctype="multipart/form-data"}))
+    {
+        @Html.AntiForgeryToken()
+        @*<label for="FileName">@Resources.LabelResources.File</label>*@
+        <input type="file" name="file" value="" />
+        <input type="submit" name="filename"  value="@Resources.LabelResources.Upload" />
+    }
+ 
+</body>
+</html>

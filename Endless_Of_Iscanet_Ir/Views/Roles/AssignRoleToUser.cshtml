@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AssignRoleToUser</title>
+</head>
+<body>
+  @using(Html.BeginForm()){ 
+      @Html.AntiForgeryToken()
+    <div> 
+        @Html.Display("Select Your User Type")
+    </div>
+    <div>
+        @Html.DropDownList("UserName")
+    </div>
+    <input type="submit"  value="CreateRole" />
+    }
+</body>
+</html>

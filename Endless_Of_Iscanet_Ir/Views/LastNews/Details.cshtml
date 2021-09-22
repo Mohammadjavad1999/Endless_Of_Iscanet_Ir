@@ -1,0 +1,214 @@
+﻿@model Models.LastNews
+@using Models;
+@{
+    Layout = "~/Views/Shared/_SiteDetailsLayout.cshtml";
+
+}
+
+    @using Models.ViewModels
+
+@section Metas{
+<meta name="author" content="MohammadjavadPousti,محمد جواد پوستی" />
+<meta name="description" content="@Model.Abstract_Description" />
+    }
+
+    @section Title{
+    <title>@Model.LastNews_Title</title>
+        }
+
+
+
+
+    <article class="row" itemscope itemtype="http://schema.org/Article">
+        <header class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="carousel">
+                        <div class="carousel-inner">
+                            <figure class="carousel-item active">
+                                <img src="~/Content/Files/LastNewsFiles/@Model.FileName" class="d-block w-100" alt="@Model.LastNews_Title | @Model.News_Writer"/>
+                                <figcaption class="col-12 carousel-caption d-block w-100 text-center"><h1 itemprop="name">@Model.LastNews_Title</h1></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </header>
+        <p class="container col-12  text-center" style="line-height:2em;" itemprop="description">
+            @Html.DisplayFor(model => model.LastNews_Des)
+        </p>
+        <hr class="col-6 container text-center" />
+        <br />
+        <time itemprop="dateCreated">
+            @Html.DisplayFor(model => model.LastNews_Date)
+        </time>
+        <section class="col-12">
+            <em class="text-dark" itemscope itemtype="http://schema.org/Person">
+                <strong itemprop="name">
+                    @Html.DisplayFor(model => model.News_Writer)
+
+                </strong>
+            </em>
+        </section>
+    </article>
+@foreach (CommentsVM comment in Model.CommentViewModels)
+
+
+
+{
+
+    <div class="row" style="width: 100.3%; border-bottom: 1px solid #d2cece; margin-right: -14px; margin-left: -1px;">
+
+        <div class="col-md-4" style="width: 21%;">
+            <div class="userProfil" style="margin-left: 9px; margin-top: 12px;">
+                @*<img src="~/Images/@comment.Users.imageProfile" class="img-circle" style="width: 46px; height: 53px; border: 1px solid #bcb8b8;" />*@
+                @*<a href="#" style="margin-left: 5px; font-weight: bold; font-size: 13px;"> @comment.Users.Username </a>*@
+            </div>
+        </div>
+
+        <div class="col-md-7" style="width: 60%;">
+            <div class="commentDetails">
+                <p style="margin-top: 27px; font-size: 13px; color: #9c9898;"> @comment.CommentMsg </p>
+                <a href="#" class="Reply" data-id="@comment.ComID">Reply</a>
+                <div class="@string.Format("{0}_{1}", "ReplayComments", comment.ComID)" style="display:none;">
+
+
+                    <div class="ReplayCommentInput" style="margin-left: 3%;  margin-bottom: 5px; margin-top: 8px;">
+                        <input type="text" id="@string.Format("{0}_{1}", "inputReplay", comment.ComID)" class="form-control" placeholder="Add a Comment ..." style="display: inline;" />
+                        <button type="button" class="btn btn-default ReplyAddComment" data-id="@comment.ComID"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-1" style="width: 19%;">
+            <div class="commentDate">
+                <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                <time class="timeago" style="margin-top: 27px; font-size: 13px; color: #9c9898;  margin-left: 4px;" datetime="@comment.CommentDate">@comment.CommentDate</time>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+}
+
+<div class="panel-footer">
+    <button type="button" class="btn btn-default Comment" data-id="@Model.LastNewsId" value="Comment">
+        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> Comment
+    </button>
+
+</div>
+<div id="@string.Format("{0}_{1}","commentsBlock", Model.LastNewsId)">
+
+    <div class="AddComment col-12 ">
+        <textarea type="text" id="@string.Format("{0}_{1}", "comment", Model.LastNewsId)" class="col-12 d-block form-control" placeholder="Add a Comment ..."></textarea>
+        <button type="button" class="btn btn-default addComment" data-id="@Model.LastNewsId"><i class="fas fa-comments"></i>&nbsp;</button>
+    </div>
+
+</div>
+
+
+
+
+
+<script src="~/Scripts/jquery-3.0.0.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script type="text/javascript">
+ $(document).ready(function () {
+
+
+            //Click Comment
+            $('.Comment').on('click', function () {
+
+                var id = $(this).attr("data-id");
+                var allCommentsArea = $('<div>').addClass('allComments_' + id);
+
+                //function that allow us to get all comments related to post id
+                $.ajax({
+
+                    type: 'GET',
+                    url: '@Url.Action("GetComments", "LastNews")',
+                    data: { PostId: id },
+                    success: function (response) {
+
+                        if ($('div').hasClass('allComments_' + id + ''))
+                        {
+                            $('div[class=allComments_' + id + ']').remove();
+                        }
+                        //console.log(response);
+
+
+                        allCommentsArea.html(response);
+                        allCommentsArea.prependTo('#commentsBlock_' + id);
+
+
+                    },
+                    error: function (response) {
+                        alert(@Resources.ErrorMessageResources.Comment_Send);
+                    }
+
+
+                })
+
+            });
+
+            //Add New Comment
+            $('.addComment').on('click', function () {
+
+                var postId = $(this).attr('data-id');
+                var commentMsg = $('#comment_' + PostId).val();
+                var dateTimeNow = new Date();
+
+                //alert('Hello');
+                var comment = {
+                    CommentMsg: Text,
+                    CommentedDate: dateTimeNow.toLocaleString()
+                };
+
+                $.ajax({
+
+                    type: 'POST',
+                    url: '@Url.Action("AddComment", "LastNews")',
+                    data: { comment, PostId },
+                    success: function (response) {
+
+                        $('div[class=allComments_' + PostId + ']').remove();
+
+                        var allCommentsArea = $('<div>').addClass('allComments_' + PostId);
+                        allCommentsArea.html(response);
+
+                        allCommentsArea.prependTo('#commentsBlock_' + PostId);
+
+                    },
+                    error: function (response) {
+                        alert('Sorry: Something Wrong');
+                    }
+
+                });
+
+            });
+
+            jQuery("time.timeago").timeago();
+
+        });
+
+</script>
+
+ 
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+
+
+

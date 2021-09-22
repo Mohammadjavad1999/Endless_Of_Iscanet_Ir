@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>تهران , میدان ونک، خیابان صانعی پلاک 50 طبقه 4</value>
+  </data>
+  <data name="Anesthesiologist_of_the_heart" xml:space="preserve">
+    <value>متخصص بیهوشی قلب</value>
+  </data>
+  <data name="Articles" xml:space="preserve">
+    <value>مقالات</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>طراحی و توسعه توسط محمد جواد پوستی</value>
+  </data>
+  <data name="Board_Chairman" xml:space="preserve">
+    <value>رئیس انجمن</value>
+  </data>
+  <data name="Board_of_Directors_Iranian_socity_of_cardiac_ansthesiology" xml:space="preserve">
+    <value>هیئت مدیره ی انجمن بیهوشی قلب </value>
+  </data>
+  <data name="Board_Secertary" xml:space="preserve">
+    <value>دبیر انجمن</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>کتاب ها</value>
+  </data>
+  <data name="Contact_Info" xml:space="preserve">
+    <value>اطلاعات تماس</value>
+  </data>
+  <data name="Contatct_Secretariat" xml:space="preserve">
+    <value>تماس با دبیرخانه</value>
+  </data>
+  <data name="Contatct_Secretariat_Association_of_Iranian_Anesthesiology_Society" xml:space="preserve">
+    <value>تماس با دبیرخانه انجمن بیهوشی قلب</value>
+  </data>
+  <data name="Degree_Of_Education" xml:space="preserve">
+    <value>مدرک تحصیلی</value>
+  </data>
+  <data name="Full_Name" xml:space="preserve">
+    <value>نام و نام خانوادگی</value>
+  </data>
+  <data name="Heart_Anesthesia_Fellowship" xml:space="preserve">
+    <value>فلوشیپ بیهوشی قلب</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>خانه</value>
+  </data>
+  <data name="Main_Inspecter" xml:space="preserve">
+    <value>بازرس اصلی</value>
+  </data>
+  <data name="Medical_Organization_ID" xml:space="preserve">
+    <value>شماره ی نظام پزشکی</value>
+  </data>
+  <data name="Members_of_the_Anesthesiology_Society_of_Iran" xml:space="preserve">
+    <value>اعضای انجمن بیهوشی قلب ایران</value>
+  </data>
+  <data name="New_Articles" xml:space="preserve">
+    <value>نوشته های تازه</value>
+  </data>
+  <data name="Related_Links" xml:space="preserve">
+    <value>لینک های مرتبط</value>
+  </data>
+  <data name="Statute_of_Association_of_Iranian_Anesthesiology_Society" xml:space="preserve">
+    <value>اساس نامه انجمن بیهوشی قلب</value>
+  </data>
+  <data name="Row" xml:space="preserve">
+    <value>ردیف</value>
+  </data>
+  <data name="doctor" xml:space="preserve">
+    <value>دکتر</value>
+  </data>
+  <data name="First_Substitutionary" xml:space="preserve">
+    <value>عضو علی البدل اول</value>
+  </data>
+  <data name="Iranian_socity_of_cardiac_ansthesiology" xml:space="preserve">
+    <value>انجمن بیهوشی قلب ایران</value>
+  </data>
+  <data name="Member_Of_Directors" xml:space="preserve">
+    <value>عضو هیئت مدیره</value>
+  </data>
+  <data name="Second_Substitutionary" xml:space="preserve">
+    <value>عضو علی البدل دوم</value>
+  </data>
+  <data name="Substitutionary_Inspecter" xml:space="preserve">
+    <value>بازرس علی البدل</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>و از</value>
+  </data>
+  <data name="Events" xml:space="preserve">
+    <value>رویداد ها</value>
+  </data>
+  <data name="LastNews" xml:space="preserve">
+    <value>آخرین اخبار</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>توسط</value>
+  </data>
+  <data name="Official_Part" xml:space="preserve">
+    <value>بخش های اداری</value>
+  </data>
+  <data name="Sitemap" xml:space="preserve">
+    <value>نقشه سایت</value>
+  </data>
+  <data name="Connection_Way" xml:space="preserve">
+    <value>راه های ارتباطی</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ایمیل</value>
+  </data>
+  <data name="FaceBookLogin" xml:space="preserve">
+    <value>همچنین اگر مایل باشید میتوانید با استفاده از حساب کاربری فیسبوک خود وارد قسمت های مختلف سایت شوید</value>
+  </data>
+  <data name="GoogleLogin" xml:space="preserve">
+    <value>اگر مایل هستید میتوانید با استفاده از حساب کاربری گوگل (جیمیل)خود وارد بخش های مختلف سایت شوید</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>نام فایل</value>
+  </data>
+  <data name="Date_Of_Publish" xml:space="preserve">
+    <value>تاریخ انتشار</value>
+  </data>
+  <data name="Article_Writer" xml:space="preserve">
+    <value>نویسنده مقاله</value>
+  </data>
+  <data name="News_Writer" xml:space="preserve">
+    <value>نویسنده خبر</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>درباره ی</value>
+  </data>
+  <data name="About_Li1" xml:space="preserve">
+    <value>ارتقا سطح علمی و مهارتی انجمن</value>
+  </data>
+  <data name="About_Li2" xml:space="preserve">
+    <value>همكاري و هماهنگي با ساير انجمنها و نهادهاي علمي در جهت ارتقاء جايگاه علمي وحرفه اي</value>
+  </data>
+  <data name="About_Li3" xml:space="preserve">
+    <value>همكاري علمي با انجمنهاي علمي منطقه اي و قاره اي و نهايتا بين الملل</value>
+  </data>
+  <data name="About_Li4" xml:space="preserve">
+    <value>ارتقاء سطح استانداردهاي تجهيزاتي- نيروي انساني و مواد مصرفي</value>
+  </data>
+  <data name="About_Li5" xml:space="preserve">
+    <value>ايجاد توازن عرضه و تقاضا در نيروي انساني</value>
+  </data>
+  <data name="About_P1" xml:space="preserve">
+    <value>بدنبال پیشرفت روز افزون علمی بیهوشی در ایران و نیاز به ارایه خدمات ویژه و فوق تخصصی ، رشته فلوشیپی بیهوشی قلب  به عنوان اولین رشته فوق تخصصی بيهوشي به همت استاد بزرگوار جناب آقای دکتر رسول فراست کیش و برخی دیگر از استادان گرانقدرپايه گذاري شده  شروع به آموزش در این زمینه نمود. به دنبال آن در سال 1384 اولین دوره انجمن بیهوشی قلب به عنوان انجمن مستقل آغاز به کار نموده و آقای دکتر فراست کیش اولین رئیس این انجمن نوپا شدند.به دنبال آن و در دو دوره بعدی انجمن با هدایت جناب آقای دکتر مصطفی علوی به فعالیتهای علمی خود ادامه داد و امروز نیز هیات مدیره جدید با ریاست آقای دکتر علیرضا جهانگیری فرد و همراهی سایر اعضای آن شامل آقای دکتر علی دباغ( دبیر انجمن)، دکتر محمد شیروانی ( خزانه دار)، دکتر رسول فراست کیش، دکتر سید مصطفی علوی، دکتر غلامرضا معصومی، دکتر امیرعباس کیانفر، دکتر رسول آذرفرین(بازرس) مشغول ارایه خدمت می باشد</value>
+  </data>
+  <data name="About_P2" xml:space="preserve">
+    <value>انجمن بیهوشی قلب ایران بر پایه نیروی انسانی فرهیخته و کارآزموده و نیز با گسترش ارتباط با مراکز داخل و خارج کشور مرتبط ، امیدوار است بتواند نقش کلیدی و راهبردی در سیتم بهداشت و درمان کشور داشته و خدمات ویژه ای به هموطنان ارایه کند.</value>
+  </data>
+  <data name="About_P3" xml:space="preserve">
+    <value>شایان ذکر است که این انجمن در حال حاضر بیش از 130 عضو فلوشیپ و در مجموع حدود 180 عضو دارد که در تمامی نقاط کشور مشغول به ارایه خدمت می باشند.</value>
+  </data>
+  <data name="Forum_Targets" xml:space="preserve">
+    <value>اهداف انجمن</value>
+  </data>
+  <data name="OfficalDocuments" xml:space="preserve">
+    <value>مستندات اداری انجمن بیهوشی قلب ایران</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>آپلود</value>
+  </data>
+  <data name="Address_Title" xml:space="preserve">
+    <value>آدرس</value>
+  </data>
+  <data name="NurseDepartment" xml:space="preserve">
+    <value>دپارتمان پرستاری</value>
+  </data>
+  <data name="Abstract_Description" xml:space="preserve">
+    <value>چکیده توضیحات</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>توضیحات تکیملی</value>
+  </data>
+  <data name="EductionCourse" xml:space="preserve">
+    <value>دوره های آموزشی</value>
+  </data>
+  <data name="Education_Course" xml:space="preserve">
+    <value>دوره های آموزشی </value>
+  </data>
+  <data name="NurseDepartment_Articles" xml:space="preserve">
+    <value>مقالات دپارتمان پرستاری</value>
+  </data>
+  <data name="NurseDepartment_Congress" xml:space="preserve">
+    <value>کنگره های دپارتمان پرستاری</value>
+  </data>
+  <data name="NurseDepartment_News" xml:space="preserve">
+    <value>اخبار دپارتمان پرستاری </value>
+  </data>
+  <data name="NurseDpartment_Book" xml:space="preserve">
+    <value>کتاب های دپارتمان پرستاری</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>دانلود</value>
+  </data>
+  <data name="Lookout" xml:space="preserve">
+    <value>قفل شده است</value>
+  </data>
+  <data name="Lookout_Text" xml:space="preserve">
+    <value>این حساب قفل شده است .لطفا دوباره امتحان کنید.</value>
+  </data>
+  <data name="Offline_Payment" xml:space="preserve">
+    <value>عضویت غیر نقدی</value>
+  </data>
+  <data name="AllCash_Des" xml:space="preserve">
+    <value>لطفا برای پرداخت رو دکمه درگاه کلیک کنید</value>
+  </data>
+  <data name="AllCash_prblm" xml:space="preserve">
+    <value>در صورت بروز هرگونه مشکل با شماره های زیر تماس حاصل بفرمایید</value>
+  </data>
+  <data name="Anesthesiology_Research_Center" xml:space="preserve">
+    <value>مرکز تحقیقات بیهوشی دانشگاه شهید بهشتی </value>
+  </data>
+  <data name="Dn_Hsp" xml:space="preserve">
+    <value>بیمارستان دانشوری</value>
+  </data>
+  <data name="Echo_Traning" xml:space="preserve">
+    <value>آموزش اکو</value>
+  </data>
+  <data name="Heart_Surgery" xml:space="preserve">
+    <value>مرکز جراحی بیمارستان مسیح دانشوری</value>
+  </data>
+  <data name="Iranian_Heart_Nurses" xml:space="preserve">
+    <value>انجمن علمی پرستاران قلب ایران</value>
+  </data>
+  <data name="Iran_Surgenos" xml:space="preserve">
+    <value>انجمن جراحان قلب ایران</value>
+  </data>
+  <data name="Offline_Pay" xml:space="preserve">
+    <value>پرداخت غیر نقدی</value>
+  </data>
+  <data name="Offline_Payment_Des" xml:space="preserve">
+    <value>مبلغ 320 هزار تومان حق عضويت سه ساله خود را به شماره حساب جاری  231542665  نزد بانك رفاه کارگران شعبه بیمارستان مسیح دانشوری کد 171 و يا به شماره كارت بانك رفاه کارگران 5894631572495703 واريز و نيز كپی فيش را نزد خود نگه داريد و کد رهگیری را در فرم زیر وارد نمایید</value>
+  </data>
+  <data name="Offline_Payment_Inf" xml:space="preserve">
+    <value>جهت هماهنگي و دريافت اطلاعات بيشتر با شماره 22663296-021 و یا 27122537-021 تماس حاصل فرمائيد.
+
+ساعات كار انجمن روزهاي زوج از ساعت 12 الی 19  ميباشد.</value>
+  </data>
+  <data name="Offline_Payment_Title" xml:space="preserve">
+    <value>اگر پرداخت شما آنلاین نیست!!!</value>
+  </data>
+  <data name="Online_Pay" xml:space="preserve">
+    <value>پرداخت آنلاین</value>
+  </data>
+  <data name="Perfusionist_Society" xml:space="preserve">
+    <value>انجمن پرفیوژنیست های ایران</value>
+  </data>
+  <data name="Registration_Title" xml:space="preserve">
+    <value>پرداخت هزینه عضویت سه ساله در انجمن بیهوشی قلب ایران</value>
+  </data>
+  <data name="Contact_Secratariant" xml:space="preserve">
+    <value>تماس با دبیرخانه انجمن بیهوشی قلب ایران</value>
+  </data>
+</root>

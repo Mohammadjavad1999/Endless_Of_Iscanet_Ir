@@ -1,0 +1,101 @@
+﻿@model Models.Event
+
+@{
+    Layout = "~/Views/Shared/_SiteUserLayout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @section Title{
+    <title>@ViewBag.CreateEventTitle</title>
+        }
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @{
+        ViewBag.CreateEventTitle = Resources.ButtonResources.Create + " " + Resources.LabelResources.Events + " " + Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology;
+    } 
+</head>
+<body>
+  
+
+
+    @using (Html.BeginForm("Create", "Events", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form container" }))
+    {
+        @Html.AntiForgeryToken()
+
+        
+          <h1 class="col text-black-50 text-center mb-3 border-bottom container pb-2">@Resources.ButtonResources.Create @Resources.LabelResources.Events</h1>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Event_Writer, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Event_Writer, new { htmlAttributes = new { @class = "form-control text-center" } })
+                    @Html.ValidationMessageFor(model => model.Event_Writer, "", new { @class = "text-danger text-center" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Event_Title, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Event_Title, new { htmlAttributes = new { @class = "form-control text-center" } })
+                    @Html.ValidationMessageFor(model => model.Event_Title, "", new { @class = "col container text-center text-warning" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Event_Des, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Event_Des, new { @class = "form-control" } )
+                    @Html.ValidationMessageFor(model => model.Event_Des, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Abstract_Description, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Abstract_Description,  new { @class = "form-control" } )
+                    @Html.ValidationMessageFor(model => model.Abstract_Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.Event_Date, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Event_Date, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Event_Date, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.Related_Tags, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Related_Tags, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Related_Tags, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+            <div class="col container form-group">
+
+                <input type="submit" value="@Resources.ButtonResources.Create" class="btn btn-outline-success d-block w-100 form-control" name="file" />
+
+            </div>
+            <div class="col container form-group">
+
+                <input type="file"  class="btn btn-outline-success d-block w-100 form-control-file" name="file" />
+
+            </div>
+
+    }
+    @*<div class="container">
+        <section class="form-group container col">
+
+            @Html.ActionLink(Resources.ButtonResources.Back, "Index", null, new { @class = "btn btn-outline-success form-control d-block w-100" })
+
+        </section>
+    </div>*@
+</body>
+</html>

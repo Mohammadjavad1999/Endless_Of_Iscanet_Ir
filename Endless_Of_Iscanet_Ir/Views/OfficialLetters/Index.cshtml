@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Models.OfficialLetter>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_SiteIndexLayout.cshtml";
+}
+@section Header{
+    <header>
+}
+</header>
+
+
+
+    @foreach (var item in Model)
+    {
+        <div class="row">
+
+            <div class="container">
+                <img src="~/Content/Files/OfficalDocuments/@item.FileName" class="col-3 d-flex" alt="@item.Title | @Resources.LabelResources.OfficalDocuments @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology" data-toggle="modal" data-target="#exampleModalLong" />
+
+            </div>
+
+            </div>
+
+
+
+            if (User.Identity.IsAuthenticated)
+            {
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-secondary" })
+            <br />
+            @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+            <br />
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            }
+            <!-- Button trigger modal -->
+            <!-- Modal -->
+        
+            }

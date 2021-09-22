@@ -1,0 +1,10 @@
+﻿body {
+    direction: rtl;
+    text-align: justify;
+    font-family: "Iranian Sans";
+}
+@font-face {
+    font-family: 'Iranian Sans';
+    src: url('/fonts/Iranian Sans.ttf');
+    src: local('☺'),url('/fonts/Iranian Sans.ttf') format('truetype');
+}

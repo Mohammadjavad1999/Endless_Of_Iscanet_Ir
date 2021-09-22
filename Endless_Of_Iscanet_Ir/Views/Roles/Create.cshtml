@@ -1,0 +1,26 @@
+﻿@model Microsoft.AspNet.Identity.EntityFramework.IdentityRole
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div>
+            @Html.EditorFor(m=>m.Name)
+        </div>
+       
+        <input type="submit" value="Create Role" />
+    }
+    <div> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿@model Models.EducationCource
+
+@{
+    Layout = "~/Views/Shared/_SiteUserLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Resources.ButtonResources.Create @Resources.LabelResources.EductionCourse @Resources.LabelResources.Of @Resources.LabelResources.NurseDepartment @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology</title>
+</head>
+<body>
+    @using (Html.BeginForm("Create","EducationCources",FormMethod.Post,new { enctype="multipart/form-data"}))
+    {
+        @Html.AntiForgeryToken()
+        
+     <h1 class="text-muted text-center col-12 headline-font">
+         @Resources.ButtonResources.Create @Resources.LabelResources.EductionCourse @Resources.LabelResources.Of @Resources.LabelResources.NurseDepartment @Resources.LabelResources.Of @Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology
+     </h1>
+            <hr class="col-6 text-center" />
+            @Html.ValidationSummary(true, "", new { @class = "text-warning" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control text-center" } })
+                    @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-warning" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Description,new { @class = "form-control text-center" } )
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-warning" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Author, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Author, new { htmlAttributes = new { @class = "form-control text-center" } })
+                    @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-warning" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Abstract, htmlAttributes: new { @class = "col col-control-label text-center" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Abstract, new { @class = "form-control text-center" } )
+                    @Html.ValidationMessageFor(model => model.Abstract, "", new { @class = "text-warning" })
+                </div>
+            </div>
+    <div class="form-group">
+        <div class="col-12">
+            <input type="file" name="file" value="Browse your file" multiple  />
+        </div>
+    </div>
+            <div class="form-group">
+                <div class="col-12">
+                    <input type="submit" value="@Resources.ButtonResources.Create" class="btn btn-outline-success form-control d-block" />
+                </div>
+            </div>
+        
+    }
+    
+ 
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Models.NurseDep_News>
+
+@{
+    Layout = "~/Views/Shared/_SiteDetailsLayout.cshtml";
+}
+@section Metas{
+    <meta name="author" content="@Resources.LabelResources.Author" />
+    <meta name="description" content="" />
+    
+    
+    }
+
+    @foreach (var item in Model)
+    {
+        <div class="col-12 card">
+            <figure class="card-header bg-transparent border-0">
+                <img  src="~/Areas/NurseDepartment/Content/Files/NurseDepartment_News/@item.FileName" class="card-img-top d-block w-100 " />
+                <figcaption class="col-12">
+                <h1 class="headline-font card-title text-muted ">
+                    @Html.DisplayFor(modelItem => item.News_Title)
+
+
+                    </h1>
+                </figcaption>
+            </figure>
+            <div class="card-body">
+                <p class="col-12 text-truncate text-justify">
+                    @Html.DisplayFor(modelItem => item.News_Abstract)
+                </p>
+            </div>
+
+
+
+            @Html.DisplayFor(modelItem => item.Date)
+
+
+            @Html.ActionLink(Resources.ButtonResources.Details, "Details", new { id = item.NurseDep_NewsId })
+        </div>
+
+
+    }
+    
+ 

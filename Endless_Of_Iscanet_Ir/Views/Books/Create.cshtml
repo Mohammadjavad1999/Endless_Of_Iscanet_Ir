@@ -1,0 +1,111 @@
+﻿@model Models.Book
+
+
+@{
+    Layout = "~/Views/Shared/_SiteUserLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @section Title{
+    <title>@ViewBag.CreateBookTitle</title>
+        }
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")*@
+    @{ 
+        ViewBag.CreateBookTitle = Resources.ButtonResources.Create + " " + Resources.LabelResources.Books + " " + Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology;
+    }
+</head>
+<body>
+  
+    
+    
+    @using (Html.BeginForm("Create","Books",FormMethod.Post,new { @class="form container"}))
+    {
+        @Html.AntiForgeryToken()
+        
+      
+            <h1 class="text-center text-black-50 border-bottom container mb-3 pb-2 container">@Resources.ButtonResources.Create @Resources.LabelResources.Books</h1>
+   
+            @Html.ValidationSummary(true, "", new { @class = "col-12 text-warning  text-center" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Book_writer, htmlAttributes: new { @class = "col col-form-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Book_writer, new { htmlAttributes = new { @class = "form-control text-center" } })
+                    @Html.ValidationMessageFor(model => model.Book_writer, "", new { @class = "text-warning col text-center" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Book_Title, htmlAttributes: new { @class = "col col-form-label text-center" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.Book_Title, new { htmlAttributes = new { @class = "form-control text-center" } })
+                    @Html.ValidationMessageFor(model => model.Book_Title, "", new { @class = "col-12 text-warning  text-center" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Book_Des, htmlAttributes: new { @class = "col col-form-label text-center" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Book_Des, new { @class = "form-control"  })
+                    @Html.ValidationMessageFor(model => model.Book_Des, "", new { @class = "col-12 text-warning  text-center" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Abstract_Description, htmlAttributes: new { @class = "col col-form-label text-center" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Abstract_Description, new { @class = "form-control"  })
+                    @Html.ValidationMessageFor(model => model.Abstract_Description, "", new { @class = "col-12 text-warning  text-center" })
+                </div>
+            </div>
+    
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.Book_Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Book_Date, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Book_Date, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+    
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.Book_file_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Book_file_Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Book_file_Name, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+    
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.CommentId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.CommentId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CommentId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.DocumentId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DocumentId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DocumentId, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+    <div class="col form-group">
+        <input type="file"  value="Browse.." name="file" class="btn btn-outline-dark d-block w-100 form-control-file btn-lg" />
+    </div>
+    
+            <div class="col form-group">
+              
+                    <input type="submit" value="Create" class="btn btn-outline-success d-block w-100 form-control btn-lg " name="file"/>
+       
+            </div>
+     
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>

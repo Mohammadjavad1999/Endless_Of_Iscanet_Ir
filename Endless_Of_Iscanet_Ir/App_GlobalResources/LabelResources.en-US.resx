@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>4th floor,Saniey st,vanak square,Tehran,Iran</value>
+  </data>
+  <data name="Anesthesiologist_of_the_heart" xml:space="preserve">
+    <value>Anesthesiologist of the Heart</value>
+  </data>
+  <data name="Articles" xml:space="preserve">
+    <value>Articles</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Design And Develope By Mohammadjavad Pousti</value>
+  </data>
+  <data name="Board_Chairman" xml:space="preserve">
+    <value>Board Chairman</value>
+  </data>
+  <data name="Board_of_Directors_Iranian_socity_of_cardiac_ansthesiology" xml:space="preserve">
+    <value>Directors of Association of cardiac ansthesiology</value>
+  </data>
+  <data name="Board_Secertary" xml:space="preserve">
+    <value>Board Secertary</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="Contact_Info" xml:space="preserve">
+    <value>Contact Info</value>
+  </data>
+  <data name="Contatct_Secretariat" xml:space="preserve">
+    <value>Contatct Secretariat</value>
+  </data>
+  <data name="Degree_Of_Education" xml:space="preserve">
+    <value>Degree of education</value>
+  </data>
+  <data name="Full_Name" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="Heart_Anesthesia_Fellowship" xml:space="preserve">
+    <value>Heart Anesthesia Fellowship</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Main_Inspecter" xml:space="preserve">
+    <value>Main Inspecter</value>
+  </data>
+  <data name="Medical_Organization_ID" xml:space="preserve">
+    <value>Medical Organization ID</value>
+  </data>
+  <data name="Members_of_the_Anesthesiology_Society_of_Iran" xml:space="preserve">
+    <value>Members of the Anesthesiology Society of Iran</value>
+  </data>
+  <data name="New_Articles" xml:space="preserve">
+    <value>New Articles</value>
+  </data>
+  <data name="Related_Links" xml:space="preserve">
+    <value>Related Links</value>
+  </data>
+  <data name="Statute_of_Association_of_Iranian_Anesthesiology_Society" xml:space="preserve">
+    <value>Statute of Association of Iranian Anesthesiology Society</value>
+  </data>
+  <data name="Row" xml:space="preserve">
+    <value>Row</value>
+  </data>
+  <data name="doctor" xml:space="preserve">
+    <value>Dr.</value>
+  </data>
+  <data name="First_Substitutionary" xml:space="preserve">
+    <value>First Substitutionary</value>
+  </data>
+  <data name="Iranian_socity_of_cardiac_ansthesiology" xml:space="preserve">
+    <value>Iranian Society of Cardiac Anesthesiology</value>
+  </data>
+  <data name="Member_Of_Directors" xml:space="preserve">
+    <value>Member of Directors</value>
+  </data>
+  <data name="Second_Substitutionary" xml:space="preserve">
+    <value>Second Substitutionary</value>
+  </data>
+  <data name="Substitutionary_Inspecter" xml:space="preserve">
+    <value>Substitutionary Inspecter</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="Events" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="LastNews" xml:space="preserve">
+    <value>Last news</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>Of</value>
+  </data>
+  <data name="Date_Of_Publish" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="By" xml:space="preserve">
+    <value>By</value>
+  </data>
+  <data name="Official_Part" xml:space="preserve">
+    <value>Official Part</value>
+  </data>
+  <data name="Sitemap" xml:space="preserve">
+    <value>Sitemap</value>
+  </data>
+  <data name="Connection_Way" xml:space="preserve">
+    <value>Connection Way</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="FaceBookLogin" xml:space="preserve">
+    <value>So You can Login with your FaceBook Account And Enter To the Defrence Part of site</value>
+  </data>
+  <data name="GoogleLogin" xml:space="preserve">
+    <value>You can Login with your Google Account(Gmail) And Enter To the Defrence Part of site</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="Article_Writer" xml:space="preserve">
+    <value>Article Writer</value>
+  </data>
+  <data name="News_Writer" xml:space="preserve">
+    <value>News Writer</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="About_Li1" xml:space="preserve">
+    <value>Promote the scientific and skill levels of the forum members</value>
+  </data>
+  <data name="About_Li2" xml:space="preserve">
+    <value>Cooperation and coordination with other associations and scientific institutions to promote scientific and professional status.</value>
+  </data>
+  <data name="About_Li3" xml:space="preserve">
+    <value>Scientific cooperation with regional and continental scientific associations and ultimately international</value>
+  </data>
+  <data name="About_Li4" xml:space="preserve">
+    <value>Upgrading the level of equipment standards - Human Resources and Consumables</value>
+  </data>
+  <data name="About_Li5" xml:space="preserve">
+    <value>To balance supply and demand in human resources</value>
+  </data>
+  <data name="About_P1" xml:space="preserve">
+    <value>Following the ever-increasing scientific progression of anesthesia in Iran and the need for specialized and advanced specialty services, Fellowship of Anesthesiology of the heart as the first specialty of anesthesia with the help of the distinguished professor, Dr. Rasoul Frost Kish and some other professors, have begun training. In this context. Following this, in the year 2005, the first course of the Anesthesiology of the Heart Society began as an independent association, and Dr. Frost Kish became the first chairman of this association. Following this, in the next two sessions of the Association, with the guidance of Dr. Mostafa Alavi, the scientific activities Today, the new board of directors, headed by Dr. Alireza Jahangiri Fard, along with other members including Dr. Ali Dabbagh (Secretary of the Association), Dr. Mohammad Shirvani (Treasurer), Dr. Rasoul Frost Kish, Dr. Seyyed Mostafa Alavi, Dr. Gholamreza Masoumi, Dr. Amir Abbas Kianfar, Dr. Rasool Azarfarin (Inspector) is serving the service.</value>
+  </data>
+  <data name="About_P2" xml:space="preserve">
+    <value>Iran's Heart Association of Anesthesiology, based on well-trained and experienced human resources, and also by expanding its relationship with the centers inside and outside the country, hopes to be able to play a key and strategic role in the healthcare system of the country and provide special services to its compatriots.</value>
+  </data>
+  <data name="About_P3" xml:space="preserve">
+    <value>It is worth noting that this association currently has more than 130 members of the Fellowship and a total of about 180 members, serving in all parts of the country.</value>
+  </data>
+  <data name="Forum_Targets" xml:space="preserve">
+    <value>Forum Targets</value>
+  </data>
+  <data name="OfficalDocuments" xml:space="preserve">
+    <value>Offical Documents Of Iranian Society Of Cardiac Ansthesiology</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="Address_Title" xml:space="preserve">
+    <value>Address </value>
+  </data>
+  <data name="NurseDepartment" xml:space="preserve">
+    <value>Nurse Department</value>
+  </data>
+  <data name="Abstract_Description" xml:space="preserve">
+    <value>Abstract Description</value>
+  </data>
+  <data name="EductionCourse" xml:space="preserve">
+    <value>Eduction Course</value>
+  </data>
+  <data name="NurseDepartment_Articles" xml:space="preserve">
+    <value>Nurse Department Articles</value>
+  </data>
+  <data name="NurseDepartment_News" xml:space="preserve">
+    <value>Nurse Department News</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Lookout" xml:space="preserve">
+    <value>Lookout</value>
+  </data>
+  <data name="Offline_Payment" xml:space="preserve">
+    <value>Offline Payment</value>
+  </data>
+  <data name="NurseDepartment_Congress" xml:space="preserve">
+    <value>NurseDepartment Congress</value>
+  </data>
+  <data name="NurseDpartment_Book" xml:space="preserve">
+    <value>NurseDpartment Book</value>
+  </data>
+  <data name="AllCash_Des" xml:space="preserve">
+    <value>Click On the Payment Link To Pay Please</value>
+  </data>
+  <data name="AllCash_prblm" xml:space="preserve">
+    <value>In case of any problems, please contact the following number</value>
+  </data>
+  <data name="Offline_Payment_Des" xml:space="preserve">
+    <value>Pay 320,000 Toman for your 3-year membership right to the current account number 231542665 at the bank of the Rafah Workers Branch of the Marsh Daneshvari Hospital Code 171 or to the bank card number of the Workers' Benefit Bank 5894631572495703 and keep a copy of the cache and keep track of the code in the form. Enter below</value>
+  </data>
+  <data name="Offline_Payment_Inf" xml:space="preserve">
+    <value>For coordination and information please contact us at 22663296-021 or 27122537-021.
+
+The working hours of the Association are from 12 to 19 hours.</value>
+  </data>
+  <data name="Offline_Payment_Title" xml:space="preserve">
+    <value>If your payment is not online !!</value>
+  </data>
+  <data name="Registration_Title" xml:space="preserve">
+    <value>Paying for a 3-year membership in the Iranian Heart Association's Anesthesiology Association</value>
+  </data>
+  <data name="Anesthesiology_Research_Center" xml:space="preserve">
+    <value>Anesthesiology Research Center of Shahid Beheshti University</value>
+  </data>
+  <data name="Contact_Secratariant" xml:space="preserve">
+    <value>For Contact To Secratariant Call To the below number</value>
+  </data>
+  <data name="Contatct_Secretariat_Association_of_Iranian_Anesthesiology_Society" xml:space="preserve">
+    <value>Contatct_Secretariat Society of Iranian Anesthesiology Society</value>
+  </data>
+  <data name="Dn_Hsp" xml:space="preserve">
+    <value>Danshevari Hospital</value>
+  </data>
+  <data name="Echo_Traning" xml:space="preserve">
+    <value>Echo Traning</value>
+  </data>
+  <data name="Heart_Surgery" xml:space="preserve">
+    <value>Heart Surgery Center of Daneshvari Hospital</value>
+  </data>
+  <data name="Iranian_Heart_Nurses" xml:space="preserve">
+    <value>Scientific Society of Iranian Heart Nurses</value>
+  </data>
+  <data name="Iran_Surgenos" xml:space="preserve">
+    <value>Association of Iranian Heart Surgeons</value>
+  </data>
+  <data name="Offline_Pay" xml:space="preserve">
+    <value>Offline Pay</value>
+  </data>
+  <data name="Online_Pay" xml:space="preserve">
+    <value>Online Pay</value>
+  </data>
+  <data name="Perfusionist_Society" xml:space="preserve">
+    <value>Iranian Perfusionist Society</value>
+  </data>
+</root>

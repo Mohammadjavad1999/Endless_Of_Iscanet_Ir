@@ -1,0 +1,138 @@
+﻿@model Models.OfflinePay
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>OfflinePay</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.FullName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FullName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Fathersname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Fathersname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Pay_Id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Pay_Id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Born_Place)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Born_Place)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Born_Date)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Born_Date)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Medec_Org_Id)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Medec_Org_Id)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Postal_Code)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Postal_Code)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Expert)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Expert)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.StaticPhone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StaticPhone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.OfflinePayId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

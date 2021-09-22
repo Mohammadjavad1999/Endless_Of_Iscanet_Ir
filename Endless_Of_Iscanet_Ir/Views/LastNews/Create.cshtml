@@ -1,0 +1,98 @@
+﻿@model Models.LastNews
+
+@{
+    Layout = "~/Views/Shared/_SiteUserLayout.cshtml";
+}
+
+
+    @section Title{
+        <title>@ViewBag.CreateLastNewsTitle</title>
+    }
+  
+    @{ 
+        ViewBag.CreateLastNewsTitle = Resources.ButtonResources.Create + " " + Resources.LabelResources.LastNews + "" + Resources.LabelResources.Iranian_socity_of_cardiac_ansthesiology;
+    }
+
+<section class="container col-6 ">
+    <h1 class="text-black-50 col-12 text-center mt-3 border-bottom pb-3 ">@ViewBag.CreateLastNewsTitle</h1>
+</section>
+
+    @using (Html.BeginForm("Create", "LastNews", FormMethod.Post, new { enctype = "multipart/form-data",@class="form container" }))
+    {
+        @Html.AntiForgeryToken()
+
+ 
+            @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LastNewsId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.LastNewsId, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.LastNewsId, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.News_Writer, htmlAttributes: new { @class = "col-12 col-form-label" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.News_Writer, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.News_Writer, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastNews_Title, htmlAttributes: new { @class = "col-12 col-form-label" })
+                <div class="col-12">
+                    @Html.EditorFor(model => model.LastNews_Title, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LastNews_Title, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastNews_Des, htmlAttributes: new { @class = "col-12 col-form-label" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.LastNews_Des,  new { @class = "form-control" } )
+                    @Html.ValidationMessageFor(model => model.LastNews_Des, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Abstract_Description, htmlAttributes: new { @class = "col-12 col-form-label" })
+                <div class="col-12">
+                    @Html.TextAreaFor(model => model.Abstract_Description,  new { @class = "form-control" } )
+                    @Html.ValidationMessageFor(model => model.Abstract_Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.LastNews_Date, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.LastNews_Date, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LastNews_Date, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.Related_Tags, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Related_Tags, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Related_Tags, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+            @*<div>
+                @Html.TextBoxFor(model => model.FileName);
+            </div>*@
+            <div class="col form-group">
+                <input type="file" class="btn btn-outline-dark d-block col-12 w-100 form-control-file" name="file" />
+            </div>
+            <div class="form-group col">
+
+                <input type="submit" value="Create" name="file" class="btn btn-outline-success col-12 form-control" />
+
+            </div>
+        
+    }
+
+    @section Footer{
+    <footer>
+        }
+    </footer>

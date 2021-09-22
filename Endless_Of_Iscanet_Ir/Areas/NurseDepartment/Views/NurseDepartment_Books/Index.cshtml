@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Models.NurseDep_Book>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+@section Metas{
+    <meta name="author" content="@Resources.LabelResources.Author" />
+    <meta name="description" content="" />
+
+
+}
+<div class="row">
+    <div class="col-12">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <figure class="carousel-item active">
+                    <img src="~/Content/Images/LastNews.jpg" class="d-block w-100" />
+                    <figcaption class="carousel-caption"><a href="#" class="btn btn-outline-light btn-lg">@Resources.LabelResources.LastNews</a></figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+@foreach (var item in Model)
+{
+    <div class="col-12 card">
+        <figure class="card-header bg-transparent border-0">
+            <img src="~/Areas/NurseDepartment/Content/Files/NurseDepartment_News/@item.FileName" class="card-img-top d-block w-100 " />
+            <figcaption class="col-12">
+                <h1 class="headline-font card-title text-muted ">
+                    @Html.DisplayFor(modelItem => item.Title)
+
+
+                </h1>
+            </figcaption>
+        </figure>
+        <div class="card-body">
+            <p class="col-12 text-truncate text-justify">
+                @Html.DisplayFor(modelItem => item.Abstract_Description)
+            </p>
+        </div>
+
+
+
+        @Html.DisplayFor(modelItem => item.Date)
+
+
+        @Html.ActionLink(Resources.ButtonResources.Details, "Details", new { id = item.Id })
+    </div>
+
+
+}

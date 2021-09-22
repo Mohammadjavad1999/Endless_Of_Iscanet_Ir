@@ -1,0 +1,13 @@
+﻿@model Models.User
+@{ 
+    Layout = null;
+}
+<style>
+    .prostyle{
+        border-radius:2.5em;
+        height:50em;
+        width:52em;
+    }
+</style>
+
+<img src="@Model.ImageProfile" alt="@Model.FirstName @Model.LastName" class="prostyle bg-light " />

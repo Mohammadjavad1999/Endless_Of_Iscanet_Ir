@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Models.Book>
+
+@{
+    Layout = "~/Views/Shared/_SiteUserLayout.cshtml";
+}
+
+
+<h2 class="col-12 text-center text-muted border-bottom border-success pb-4">@Resources.ButtonResources.Delete @Resources.LabelResources.Books</h2>
+
+
+@Html.ActionLink(Resources.ButtonResources.Create + " " + Resources.LabelResources.Books, "Create", null, new { @class = "col-6 container d-flex justify-content-center mt-5 mb-3 btn btn-outline-primary" })
+
+
+@*@Html.DisplayNameFor(model => model.Article_writer)
+
+    @Html.DisplayNameFor(model => model.Article_Title)
+
+    @Html.DisplayNameFor(model => model.Article_Des)
+
+    @Html.DisplayNameFor(model => model.Article_Date)
+
+    @Html.DisplayNameFor(model => model.Abstract_Description)
+
+    @Html.DisplayNameFor(model => model.Article_file_Name)*@
+
+@*@Html.DisplayNameFor(model => model.CommentId)
+
+    @Html.DisplayNameFor(model => model.DocumentId)
+
+    @Html.DisplayNameFor(model => model.IndexItemId)*@
+
+
+    @foreach (var item in Model)
+    {
+
+        <div class="card col-lg-6 col-md-12 justify-content-center container mt-2 mb-2 border-bottom pb-2">
+            <div class="card-header-pills col-12 d-block ">
+                <h4 class="card-title">@Html.DisplayFor(modelItem => item.Book_writer)</h4>
+            </div>
+            <section class="col-12 card-body">
+                <p class="card-text">
+                    <h6 class="text-muted">@Resources.LabelResources.Title :</h6>
+
+                    @Html.DisplayFor(modelItem => item.Book_Title)
+                </p>
+                <p class="card-text">
+                    <h6 class="text-muted">@Resources.LabelResources.Description :</h6>
+                    @Html.DisplayFor(modelItem => item.Book_Des)
+                </p>
+                <p class="card-text">
+                    <h6 class="text-muted">@Resources.LabelResources.Date_Of_Publish :</h6>
+
+                    @Html.DisplayFor(modelItem => item.Book_Date)
+                </p>
+                <p class="card-text">
+                    @Html.DisplayFor(modelItem => item.Abstract_Description)
+                </p>
+                <p class="card-text">
+                    <h6 class="text-muted">@Resources.LabelResources.File :</h6>
+                    @Html.DisplayFor(modelItem => item.Book_file_Name)
+                </p>
+            </section>
+
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.CommentId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DocumentId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndexItemId)
+                </td>
+            *@
+
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.ArticleId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ArticleId }) |*@
+            <div class="card-footer bg-transparent">
+                @Html.ActionLink(Resources.ButtonResources.Delete, "Delete", new { id = item.BookId }, new { @class = "btn btn-outline-success d-block w-100" })
+            </div>
+        </div>
+    }
+
+
+@section Footer{
+    <footer>
+}
+</footer>

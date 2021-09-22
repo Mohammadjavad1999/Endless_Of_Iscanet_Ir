@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Models.Congress>
+@{
+    ViewBag.Title = "DeleteCongress";
+}
+
+<h2>DeleteCongress</h2>
+
+@{
+    Layout = "~/Views/Shared/_SiteUserLayout.cshtml";
+}
+
+
+<h2 class="col-12 text-center text-muted border-bottom border-success pb-4">@Resources.ButtonResources.Delete @Resources.LabelResources.Events</h2>
+@section Header{
+    
+    
+    }
+
+@Html.ActionLink(Resources.ButtonResources.Create + " " + Resources.LabelResources.Events, "Create", null, new { @class = "col-6 container d-flex justify-content-center mt-5 mb-3 btn btn-outline-primary" })
+
+
+
+@foreach (var item in Model)
+{
+
+    <div class="card col-lg-6 col-md-12 justify-content-center container mt-2 mb-2 border-bottom pb-2">
+        <div class="card-header-pills col-12 d-block ">
+            <h4 class="card-title">
+                @Html.DisplayFor(modelItem=>item.CongressTitle)
+            </h4>
+        </div>
+        <section class="col-12 card-body">
+            <p class="card-text">
+                <h6 class="text-muted text-truncate">
+                    @Html.DisplayFor(modelItem => item.Congress_Description)
+                </h6>
+            </p>
+        </section>
+        <div class="card-footer bg-transparent">
+            @Html.ActionLink(Resources.ButtonResources.Delete, "Delete", new { id = item.CongressId }, new { @class = "btn btn-outline-success d-block w-100" })
+        </div>
+    </div>
+}
+
+
+@section Footer{
+    <footer>
+}
+</footer>
